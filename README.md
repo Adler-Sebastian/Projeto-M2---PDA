@@ -54,7 +54,7 @@
 |   +---layout                    `- Estilos de layout (estrutura geral da página)`
 |   |       layout.css
 |   |
-|   \---libs                     ` - Estilos de bibliotecas externas`
+|   \---libs                     `- Estilos de bibliotecas externas`
 |           bootstrap.css         `- Estilos do framework Bootstrap `|
 +---fonts                        ` - Fontes do projeto`
 |       coolvetica compressed hv.otf   `- Fonte Coolvetica Compressed HV (pode ser usada em diferentes partes do site)`
@@ -76,8 +76,8 @@
 |
 \---pages                         `- Páginas do site`
     +---Dashboard                ` - Páginas relacionadas ao painel de controle (dashboard)`
-    |       dashboard.html        `- Página do painel de controle (dashboard)
-`    |       dashboard.module.css  `- Estilos específicos para a página do painel de controle`
+    |       dashboard.html        `- Página do painel de controle (dashboard)`
+    |       dashboard.module.css  `- Estilos específicos para a página do painel de controle`
     |
     \---Login                     `- Páginas relacionadas ao login`
             login.html            `- Página de login`
