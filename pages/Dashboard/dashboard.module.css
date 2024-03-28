@@ -169,12 +169,39 @@ body {
     flex-direction: column;
 }
 
-.section {
-    margin: 10px;
+.section-kpi {
+    margin: 20px;
+    padding: 20px;
     display: flex;
     flex: 1;
-    justify-content: center;
+    flex-direction: column;
+    justify-content: space-around;
     align-items: center;
     background-color: #3a3a3a5e;
     border-radius: 20px;
+}
+
+.section-kpi .general  {
+    color: #fff;
+    display: flex;
+    justify-content: space-around;
+    gap: 20px;
+}
+
+.section-kpi .general div {
+    width: 200px;
+    height: 100px;
+    border-radius: 20px;
+    background-color: rgba(48, 48, 48, 0.877);
+}
+
+.section-kpi .graph {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    gap: 20px;
+}
+
+.section-kpi .bar-graph {
+    background-color: rgba(255, 255, 255, 0.877);
 }
