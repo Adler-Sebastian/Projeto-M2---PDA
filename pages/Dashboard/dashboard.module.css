@@ -7,7 +7,7 @@
 
 body {
     background-size: 100% 100%;
-    background-image: url("https://media.istockphoto.com/id/1623303770/photo/creative-background-image-is-blurred-evening-city-lights-and-light-snowfall.jpg?b=1&s=612x612&w=0&k=20&c=--I6QisPR7yGmgujOI2co8U3FIK5tBv6xAjMup67ghc=");
+    background-image: url("https://img.freepik.com/premium-photo/abstract-technology-background-network-connection-structure-black-background-3d-rendering_698341-186.jpg?w=900");
 }
 
 /* Estilo do container do dashboard */
@@ -18,28 +18,101 @@ body {
 
 /* Estilo da barra lateral */
 .sidebar {
-    width: 250px;
-    background-color: #333;
-    color: #fff;
+    color: #ffffff;
+    margin: 20px;
+    padding: 20px 0 0 0;
+    width: 70px;
+    background: rgba( 255, 255, 255, 0 );
+    box-shadow: 0 8px 8px 0 rgba(190, 190, 190, 0.37);
+    backdrop-filter: blur( 9.5px );
+    -webkit-backdrop-filter: blur( 9.5px );
+    border-radius: 20px;
+    border: 1px solid rgba( 255, 255, 255, 0.18 );
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: width 0.5s;
+    overflow: hidden;
+}
+
+.sidebar:hover {
+    width: 170px;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    gap: 20px;
     padding: 20px;
 }
 
-.sidebar h2 {
-    margin-bottom: 10px;
+.logo i {
+    font-size: 30px;
 }
 
+.logo h2 {
+    color: rgb(255, 255, 255);
+}
+
+
 .sidebar ul {
-    list-style-type: none;
+    display: flex;
+    flex-direction: column;
 }
 
 .sidebar ul li {
-    margin-bottom: 10px;
+    padding: 20px;
+}
+
+.sidebar ul li:hover {
+    background-color: rgba(68, 68, 68, 0.308);
 }
 
 .sidebar ul li a {
+    display: flex;
+    align-items: center;
+    gap: 10px;
     color: #fff;
     text-decoration: none;
 }
+
+.sidebar ul li a i {
+    font-size: 25px;
+    display: flex;
+    align-items: center;
+}
+
+/* oculta os texto até o mouse dar foco à sidebar (hover) */
+.sidebar:not(:hover) .logo h2,
+.sidebar:not(:hover) .text-link{
+    display: none;
+}
+
+
+.sidebar:not(:hover) ul,
+.sidebar:not(:hover) .logo{
+    justify-content: center;
+    align-items: center !important;
+}
+
+
+.profile {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    gap: 20px;
+    padding: 20px;
+    background-color: #27272783;
+    transition: flex-direction 0.3s;
+}
+
+.sidebar:not(:hover) .profile {
+    flex-direction: column;
+}
+
+
+
 
 /* Estilo do conteúdo principal */
 .main-content {
@@ -50,7 +123,7 @@ body {
 
 /* Estilo da barra de navegação */
 .navbar {
-    color: #000000;
+    color: #ffffff;
     padding: 20px;
     display: flex;
     justify-content: space-between;
@@ -70,16 +143,22 @@ body {
 
 .navbar ul {
     list-style-type: none;
+    display: flex;
+    align-items: center;
+    gap: 20px;
 }
 
 .navbar ul li {
     display: inline-block;
-    margin-right: 10px;
 }
 
 .navbar ul li a {
     color: #fff;
     text-decoration: none;
+}
+
+.navbar ul li a i {
+    font-size: 20px;
 }
 
 /* Estilo das seções do dashboard */
@@ -96,9 +175,6 @@ body {
     flex: 1;
     justify-content: center;
     align-items: center;
-    background-color: #864242;
-}
-
-.section h2 {
-    margin-bottom: 10px;
+    background-color: #3a3a3a5e;
+    border-radius: 20px;
 }
