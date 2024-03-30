@@ -8,21 +8,28 @@
     <link rel="stylesheet" href="/css/layout/layout.css">
     <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/2.2.0/uicons-bold-rounded/css/uicons-bold-rounded.css'>
     <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/2.2.0/uicons-regular-rounded/css/uicons-regular-rounded.css'>
+
+    <script src="https://cdn.amcharts.com/lib/5/index.js"></script>
+<script src="https://cdn.amcharts.com/lib/5/xy.js"></script>
+<script src="https://cdn.amcharts.com/lib/5/radar.js"></script>
+<script src="https://cdn.amcharts.com/lib/5/themes/Animated.js"></script>
 </head>
 <body>
     <section class="dashboard-container">
+
         <aside class="sidebar">
           <div class="logo">
             <i class="fi fi-rr-home"></i>
             <h2>Logo</h2>
           </div>
-            
+
             <hr>
 
             <ul>
                 <li><a href="#"><i class="fi fi-rr-dashboard"></i><span class="text-link">Dashboard</span></a></li>
                 <li><a href="#"><i class="fi fi-rr-file-medical-alt"></i></i><span class="text-link">Relatorios</span></a></li>
                 <li><a href="#"><i class="fi fi-br-chart-simple"></i><span class="text-link">Graficos</span></a></li>
+                <li><a href="#"><i class="fi fi-rr-users-alt"></i><span class="text-link">Time</span></a></li>
             </ul>
 
             <hr>
@@ -48,41 +55,117 @@
 
         <main class="main-content">
             <nav class="navbar">
-                <h1>Meu Dashboard</h1>
+                <h5>Dashboard</h5>
                 <ul>
                     <li><a href="#"><i class="fi fi-rr-envelope"></i></a></li>
                     <li><a href="#"><i class="fi fi-rr-bell"></i></a></li>
-                    <li><a href="#"><i class="fi fi-rr-circle-user" style="font-size: 30px;"></i></a></li>
+                    <li><a href="#"><i class="fi fi-rr-circle-user" style="font-size: 20px;"></i>Perfil</a></li>
                 </ul>
             </nav>
-            
+
             <!-- Conteúdo do dashboard -->
             <div class="dashboard-content">
-                
+
                 <section class="section-kpi">
-                    <div class="general">
-                      <div>a</div>
-                      <div>b</div>
-                      <div>c</div>
-                      <div>d</div>
-                    </div>
-                    <div class="graph">
-                      <div class="line-graph">
-                        <canvas class="line-chart"></canvas>
+                    <ul class="totalizing-cards">
+                      <li class="card-resume">
+                        <div class="card-resume-content">
+                          <div class="resume-text">
+                            <h5>Total de Capital</h5>
+                          </div>
+                          <div class="resume-number">
+                            <h3>R$23,000</h3>
+                            <span>+32%</span>
+                          </div>
+                        </div>
+                        <div class="card-resume-icon">
+                          <i class="fi fi-rr-wallet"></i>
+                        </div>
+                      </li>
+                      <li class="card-resume">
+                        <div class="card-resume-content">
+                          <div class="resume-text">
+                            <h5>Total de Usuarios</h5>
+                          </div>
+                          <div class="resume-number">
+                            <h3>1.234</h3>
+                            <span>+4%</span>
+                          </div>
+                        </div>
+                        <div class="card-resume-icon">
+                          <i class="fi fi-rr-users-alt"></i>
+                        </div>
+                      </li>
+                      <li class="card-resume">
+                        <div class="card-resume-content">
+                          <div class="resume-text">
+                            <h5>Total de Novos Clientes</h5>
+                          </div>
+                          <div class="resume-number">
+                            <h3>500</h3>
+                            <span>+20%</span>
+                          </div>
+                        </div>
+                        <div class="card-resume-icon">
+                          <i class="fi fi-rr-user-add"></i>
+                        </div>
+                      </li>
+                      <li class="card-resume">
+                        <div class="card-resume-content">
+                          <div class="resume-text">
+                            <h5>Total de Vendas</h5>
+                          </div>
+                          <div class="resume-number">
+                            <h3>2.543</h3>
+                            <span>+50%</span>
+                          </div>
+                        </div>
+                        <div class="card-resume-icon">
+                          <i class="fi fi-rr-selling"></i>
+                        </div>
+                      </li>
+                    </ul>
+
+                    <div class="general-info">
+                      <div class="card-welcome">
+                        <div class="wlc-text">
+                          <h5>Bem-vindo(a) de volta</h5>
+                          <h3>Usuario</h3>
+                        </div>
+                        <div class="wlc-img">
+                          <img src="/images/dashboard.gif" alt="dashboard animado">
+                        </div>
                       </div>
-  
-                      <div class="polar-graph">
+                      <div class="card-satisfaction">
+                        <div class="satisfaction-text">
+                          <h5>Taxa de Satisfação</h5>
+                          <h6>Dados de todos os projetos</h6>
+                        </div>
+                        <div class="satisfaction-graph">
+                          <div id="chartdiv"></div>
+                        </div>
+                      </div>
+                      <div class="card-score">c</div>
+                    </div>
+
+                    <div class="graph">
+                      <!-- <div class="polar-graph">
                         <canvas class="polar-chart"></canvas>
-                      </div>  
+                      </div>  -->
+
+                      <!-- <div class="line-graph">
+                        <canvas class="line-chart"></canvas>
+                      </div> -->
                     </div>
                 </section>
 
-                
+
             </div>
         </main>
     </section>
 
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.min.js"></script>
     <script src="/js/libs/polar-chart.js"></script>
     <script src="/js/libs/line-chart.js"></script>
     <script src="/js/script.js"></script>

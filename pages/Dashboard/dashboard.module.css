@@ -1,9 +1,12 @@
+@import url('/css/layout/layout.css');
+
 /* Reset de estilos padrão */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
+
 
 body {
     background-size: 100% 100%;
@@ -13,26 +16,32 @@ body {
 /* Estilo do container do dashboard */
 .dashboard-container {
     display: flex;
+    width: 100%;
     height: 100vh;
+    color: var(--)
 }
+
+
 
 /* Estilo da barra lateral */
 .sidebar {
     color: #ffffff;
-    margin: 20px;
     padding: 20px 0 0 0;
     width: 70px;
+    height: calc(100% - 40px);
+    margin: 20px;
+    position: fixed;
     background: rgba( 255, 255, 255, 0 );
     box-shadow: 0 8px 8px 0 rgba(190, 190, 190, 0.37);
     backdrop-filter: blur( 9.5px );
     -webkit-backdrop-filter: blur( 9.5px );
-    border-radius: 20px;
     border: 1px solid rgba( 255, 255, 255, 0.18 );
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    transition: width 0.5s;
+    transition: width 0.3s;
     overflow: hidden;
+    border-radius: 20px;
 }
 
 .sidebar:hover {
@@ -97,6 +106,7 @@ body {
 }
 
 
+
 .profile {
     display: flex;
     align-items: center;
@@ -119,6 +129,14 @@ body {
     flex: 1;
     display: flex;
     flex-direction: column;
+    height: 200%;
+    margin-left: 80px;
+    padding: 20px;
+    transition: margin-left 0.3s ease;
+}
+
+.sidebar:hover + .main-content {
+    margin-left: 170px !important;
 }
 
 /* Estilo da barra de navegação */
@@ -126,9 +144,11 @@ body {
     color: #ffffff;
     padding: 20px;
     display: flex;
+    position: sticky;
+    top: 20px;
     justify-content: space-between;
     align-items: center;
-    margin: 20px;
+    margin: 0 20px 0 20px;
     background: rgba( 255, 255, 255, 0 );
     box-shadow: 0 8px 8px 0 rgba(190, 190, 190, 0.37);
     backdrop-filter: blur( 9.5px );
@@ -149,16 +169,22 @@ body {
 }
 
 .navbar ul li {
-    display: inline-block;
+    display: flex;
+    align-items: center;
 }
 
 .navbar ul li a {
     color: #fff;
     text-decoration: none;
+    display: flex;
+    align-items: center;
+    text-align: justify;
+    gap: 10px;
 }
 
 .navbar ul li a i {
-    font-size: 20px;
+    font-size: 15px;
+    display: flex;
 }
 
 /* Estilo das seções do dashboard */
@@ -175,33 +201,155 @@ body {
     display: flex;
     flex: 1;
     flex-direction: column;
-    justify-content: space-around;
     align-items: center;
     background-color: #3a3a3a5e;
     border-radius: 20px;
 }
 
-.section-kpi .general  {
+.section-kpi .totalizing-cards  {
+    width: 100%;
     color: #fff;
     display: flex;
     justify-content: space-around;
+    gap: 30px;
+}
+
+.section-kpi .totalizing-cards .card-resume {
+    width: 30%;
+    height: 70px;
+    border-radius: 20px;
+    background-color: rgb(48, 48, 48);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 15px;
+}
+
+.section-kpi .totalizing-cards .card-resume .card-resume-content {
+   flex: 1;
+}
+
+.section-kpi .totalizing-cards .card-resume .card-resume-content .resume-text {
+    font-weight: 600;
+    color: rgba(170, 170, 170, 0.705);
+}
+
+.section-kpi .totalizing-cards .card-resume .card-resume-content .resume-number {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.section-kpi .totalizing-cards .card-resume .card-resume-content .resume-number h3{
+    font-weight: 600;
+}
+
+.section-kpi .totalizing-cards .card-resume .card-resume-content .resume-number span{
+    font-weight: 400;
+    font-size: 10px;
+    color: rgb(0, 255, 0);
+}
+
+.section-kpi .totalizing-cards .card-resume .card-resume-icon{
+    width: 35px;
+    height: 35px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    background-color: rgb(133, 133, 133);
+}
+
+
+.general-info {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    margin: 20px;
     gap: 20px;
 }
 
-.section-kpi .general div {
-    width: 200px;
-    height: 100px;
+.general-info .card-welcome {
+    width: 45%;
+    height: 200px;
     border-radius: 20px;
-    background-color: rgba(48, 48, 48, 0.877);
+    background-color: rgb(48, 48, 48);
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 15px;
+}
+
+.general-info .card-welcome .wlc-text {
+    font-weight: 600;
+    color: rgba(170, 170, 170, 0.705);
+    flex: 1;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.general-info .card-welcome .wlc-img {
+    width: 60%;
+}
+
+.general-info .card-welcome .wlc-img img{
+    width: 100%;
+}
+
+.general-info .card-satisfaction {
+    width: 30%;
+    height: 200px;
+    border-radius: 20px;
+    background-color: rgb(48, 48, 48);
+    display: flex;
+    flex-direction: column;
+    padding: 15px;
+}
+
+.general-info .card-satisfaction .satisfaction-text {
+    font-weight: 600;
+    color: rgba(170, 170, 170, 0.705);
+}
+
+.general-info .card-satisfaction .satisfaction-graph {
+    flex: 1;
+
+}
+
+#chartdiv {
+    width: 100%;
+    height: 100%;
+  }
+  
+
+.general-info .card-score {
+    width: 40%;
+    height: 200px;
+    border-radius: 20px;
+    background-color: rgb(48, 48, 48);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 15px;
 }
 
 .section-kpi .graph {
     width: 100%;
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     gap: 20px;
 }
 
-.section-kpi .bar-graph {
-    background-color: rgba(255, 255, 255, 0.877);
+.section-kpi .line-graph {
+    width: 80%;
 }
+
+.section-kpi .line-graph canvas{
+    background-color: rgba(0, 0, 0, 0.877);
+    width: 100%;
+    border-radius: 20px;
+}
+
