@@ -1,12 +1,247 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Cadastro/Login</title>
-    <link rel="stylesheet" href="login.module.css">
-</head>
-<body>
-    <h1>Pagina de cadastro e login.</h1>
-</body>
+    <link rel="stylesheet" href="login.module.css" />
+  </head>
+  <body>
+    <section>
+      <main>
+        <form id="" action="#">
+          <label class="labelForm" for="name" > Nome Completo:</label>
+          <input
+            class="input_form"
+            type="text"
+            id="name"
+            name="name"
+            autofocus
+            placeholder="Digite o seu nome "
+          />
+          <div id="messagename"></div>
+
+          <label for="date" class="labelForm"> Data de nascimento: </label>
+          <input class="input_form" type="date" id="date" name="date" />
+
+          <div class="divGender">
+            <label for="gender" class="labelForm"> Genêro:</label>
+            <label class="option" for="cisgenderWoman">Mulher cisgênero</label>
+
+            <input
+              type="radio"
+              id="cisgenderW"
+              class="gender"
+              name="gender"
+              value="cisgenderWoman"
+            />
+            <label class="option" for="transgenderWoman">
+              Mulher transgênero</label
+            >
+
+            <input
+              type="radio"
+              id="transgenderWoman"
+              class="gender"
+              name="gender"
+              value="transgenderWoman"
+            />
+            <label class="option" for="cisgenderMan">Homem cisgênero</label>
+
+            <input
+              type="radio"
+              id="cisgenderMan"
+              name="gender"
+              class="gender"
+              value="cisgenderMan"
+            />
+            <label class="option" for="TransgenderMan">Homem transgênero</label>
+
+            <input
+              type="radio"
+              id="TransgenderMan"
+              name="gender"
+              class="gender"
+              value="TransgenderMan"
+            />
+
+            <label class="option" for="non_binary">não-binário</label>
+
+            <input
+              type="radio"
+              id="binary"
+              name="gender"
+              value="non-binary"
+              class="gender"
+            />
+            <label class="option" for="other">Outros</label>
+
+            <input
+              type="radio"
+              id="outro"
+              name="gender"
+              value="outro"
+              class="gender"
+            />
+          </div>
+
+          <label for="cpf"  class="labelForm">CPF:</label>
+          <input
+            class="input_form"
+            type="number"
+            id="cpf"
+            name="cpf"
+            maxlength="11"
+            placeholder="Digite seu cpf"
+          />
+          <div id="cpfMessage"></div>
+
+          <label for="cellNumber" class="labelForm">
+            Telefone Celular:</label
+          >
+          <input
+            class="input_form"
+            type="tel"
+            id="number"
+            name="number"
+            placeholder="(xx) xxxxx-xxxx"
+            maxlength="14"
+          />
+
+          <label class="labelForm" for="address"  >
+            Cep:</label
+          >
+          <input
+            class="input_form"
+            type="text"
+            maxlength="9"
+            id="zipCode"
+            name="zipCode"
+            placeholder="Digite seu cep"
+          />
+          <div id="cepMessage"></div>
+
+          <label class="labelForm" for="address">
+            Cidade:</label
+          >
+          <input
+            class="input_form"
+            type="text"
+            id="city"
+            name="cidadecity"
+            placeholder="Digite sua cidade"
+          />
+
+          <label  for="address" class="labelForm">
+            Bairro:</label
+          >
+          <input
+            class="input_form"
+            type="text"
+            id="neighborhood"
+            name="neighborhood"
+            placeholder="Digite seu bairro"
+          />
+
+          <label  for="address" class="labelForm"> Rua:</label>
+          <input
+            class="input_form"
+            type="text"
+            id="road"
+            name="road"
+            placeholder="Digite sua rua"
+          />
+
+          <labe id="labelN" for="address" class="labelForm"> Nº:</label>
+          <input
+            class="input_form"
+            type="number"
+            id="num"
+            name="number"
+            placeholder="Digite o número da casa"
+          />
+
+          <label for="address" class="labelForm"> Complemento:</label>
+          <input
+            class="input_form"
+            type="text"
+            id="complement"
+            name="complement"
+            placeholder="Digite o complemento"
+          />
+
+          <label class="labelForm"  for="login"
+            >Login:</label
+          >
+          <input
+            class="input_form"
+            type="text"
+            id="login"
+            name="login"
+            placeholder="Digite um login"
+            maxlength="6"
+          />
+          <div id="mensagemLogin"></div>
+          <label class="labelForm" id="labelEmail" for="login" class="form">
+            E-mail:</label
+          >
+          <input
+            class="input_form"
+            type="email"
+            id="email"
+            name="email"
+            placeholder="Digite um e-mail"
+          />
+          <div id="loginMessage"></div>
+
+          <label class="labelForm" for="senha" >
+            Senha:</label
+          >
+          <div class="password-container">
+            <input
+              class="input_form"
+              type="password"
+              id="password"
+              name="password"
+              placeholder="Digite sua senha"
+              maxlength="8"
+              autocomplete="new-password"
+            />
+            <i id="seePassword" class="far fa-eye"></i>
+          </div>
+
+          <label
+            class="labelForm"
+      
+            for="senha2"
+    
+          >
+            Confirmação de Senha:</label
+          >
+          <div class="password-container">
+            <input
+              class="input_form"
+              type="password"
+              id="PasswordC"
+              name="PasswordC"
+              placeholder="Digite sua senha"
+              maxlength="8"
+              autocomplete="new-password"
+            />
+            <i id="seePassword" class="far fa-eye"></i>
+          </div>
+          <div class="conta">
+            <p>Já possui uma conta?</p>
+            <a href="#" class="session">Iniciar sessão</a>
+          </div>
+          <div id="message"></div>
+
+          <button class="register" type="submit" id="register">
+            Cadastrar
+          </button>
+          <button class="toClean" id="toClean">Limpar</button>
+        </form>
+      </main>
+    </section>
+  </body>
 </html>
