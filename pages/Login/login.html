@@ -26,36 +26,34 @@
 
           <div class="divGender">
             <label for="gender" class="labelForm"> Genêro:</label>
-            <label class="option" for="cisgenderWoman">Mulher cisgênero</label>
-
+           
             <input
               type="radio"
               id="cisgenderW"
               class="gender"
               name="gender"
               value="cisgenderWoman"
-            />
-            <label class="option" for="transgenderWoman">
-              Mulher transgênero</label
-            >
-
-            <input
+            /> 
+            <label class="option" for="cisgenderWoman">Mulher cisgênero</label>
+ <input
               type="radio"
               id="transgenderWoman"
               class="gender"
               name="gender"
               value="transgenderWoman"
             />
-            <label class="option" for="cisgenderMan">Homem cisgênero</label>
+            <label class="option" for="transgenderWoman">
+              Mulher transgênero</label
+            >
 
-            <input
+              <input
               type="radio"
               id="cisgenderMan"
               name="gender"
               class="gender"
               value="cisgenderMan"
             />
-            <label class="option" for="TransgenderMan">Homem transgênero</label>
+            <label class="option" for="cisgenderMan">Homem cisgênero</label>
 
             <input
               type="radio"
@@ -64,17 +62,17 @@
               class="gender"
               value="TransgenderMan"
             />
+         
+            <label class="option" for="TransgenderMan">Homem transgênero</label>
 
-            <label class="option" for="non_binary">não-binário</label>
-
-            <input
+   <input
               type="radio"
               id="binary"
               name="gender"
               value="non-binary"
               class="gender"
             />
-            <label class="option" for="other">Outros</label>
+            <label class="option" for="non_binary">Não-binário</label>
 
             <input
               type="radio"
@@ -83,7 +81,11 @@
               value="outro"
               class="gender"
             />
+                        <label class="option" for="other">Outros</label>
           </div>
+         
+
+
 
           <label for="cpf"  class="labelForm">CPF:</label>
           <input
@@ -152,7 +154,7 @@
             placeholder="Digite sua rua"
           />
 
-          <labe id="labelN" for="address" class="labelForm"> Nº:</label>
+          <label id="labelN" for="address" class="labelForm"> Nº:</label>
           <input
             class="input_form"
             type="number"
@@ -230,7 +232,7 @@
             />
             <i id="seePassword" class="far fa-eye"></i>
           </div>
-          <div class="conta">
+          <div class="account">
             <p>Já possui uma conta?</p>
             <a href="#" class="session">Iniciar sessão</a>
           </div>

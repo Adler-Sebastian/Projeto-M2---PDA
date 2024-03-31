@@ -1,31 +1,69 @@
-@import url('/css/layout/layout.css');body{
-    border: 1px solid red;
-}
-
+@import url("/css/layout/layout.css");
 
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
 }
-.labelForm{
-    display: block;
-    margin-bottom: 5px;
-    font-weight: bold;
-    margin-top: 30px;
-  }
-
-    form{
-        width: 35%;
+main {
+  background-color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 50px;
+}
+form {
+  width: 35%;
   max-width: 600px;
   padding: 3rem;
   border-radius: 10px;
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
-    }
-    main{
-        background-color: white;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        padding: 50px;
-    }
+}
+.labelForm {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+  margin-top: 30px;
+
+}
+.input_form {
+  width: 100%;
+  padding: 10px;
+
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+/* genero */
+.divGender {
+  display: flex;
+  flex-direction: column;
+}
+
+.divGender label {
+
+  margin-bottom: 5px;
+}
+.gender {
+  margin-left: 20px;
+}
+/* parte final login/button */
+.account {
+  display: flex;
+  gap: 5px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  justify-content: flex-end;
+  font-size: 18px;
+}
+button {
+  padding: 10px 20px;
+  background-color: #405b39;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  /* transition: background-color 0.3s ease; */
+  margin-top: 10px;
+}
