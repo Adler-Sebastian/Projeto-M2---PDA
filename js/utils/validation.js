@@ -13,19 +13,20 @@ function cpfValidation() {
   }
   if (
     cpfInput === "00000000000" ||
-    "11111111111" ||
-    "22222222222" ||
-    "33333333333" ||
-    "44444444444" ||
-    "55555555555" ||
-    "66666666666" ||
-    "77777777777" ||
-    "88888888888" ||
-    "99999999999"
+    cpfInput === "11111111111" ||
+    cpfInput === "22222222222" ||
+    cpfInput === "33333333333" ||
+    cpfInput === "44444444444" ||
+    cpfInput === "55555555555" ||
+    cpfInput === "66666666666" ||
+    cpfInput === "77777777777" ||
+    cpfInput === "88888888888" ||
+    cpfInput === "99999999999"
   ) {
     cpfMessage.innerHTML = "Não repita os números.";  
-  }
 
+  return false;
+}
   let soma = 0;
   let resto;
 
