@@ -5,6 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Cadastro/Login</title>
     <link rel="stylesheet" href="login.module.css" />
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.16/jquery.mask.min.js"></script>
+
+
   </head>
   <body>
     <section>
@@ -233,7 +238,7 @@
           </div>
           <div class="account">
             <p>Já possui uma conta?</p>
-            <a href="#" class="session">Iniciar sessão</a>
+            <a href="#" class="session" id="session">Iniciar sessão</a>
           </div>
           <div id="message"></div>
 
@@ -244,7 +249,14 @@
         </form>
       </main>
     </section>
-
+<section>
+  <form action="" id="login4">
+    <label for="">Login</label>
+    <input type="text">
+    <label for=""> Senha</label>
+    <input type="text">
+  </form>
+</section>
     <script src="../../js/utils/validation.js"></script>
   </body>
 </html>
