@@ -97,7 +97,11 @@ function address() {
     })
     
 }
-
+const email = document.getElementById('email')
+function validateEmail(email) {
+  var re = /\S+@\S+\.\S+/;
+  return re.test(email);
+}
 
 // number.addEventListener("input", celular);
 // function celular(number) {
