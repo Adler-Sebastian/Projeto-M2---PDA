@@ -59,16 +59,25 @@ $(document).ready(function () {
   $("#number").mask("(99) 99999-9999");
 });
 
-zipCode.addEventListener("input", endereco);
-
-function endereco() {
+zipCode.addEventListener("input", address);
+function address() {
   const zipCode = document.getElementById("zipCode").value;
   const city = document.getElementById("city");
   const neighborhood = document.getElementById("neighborhood");
   const road = document.getElementById("road");
+  const cepMessage = document.getElementById("cepMessage");
 
-  if (zipCode.length >8) {
-    alert("CEP inválido!");
+  if (zipCode.length !== 8) {
+    city.value = "";
+    neighborhood.value = "";
+    road.value = "";
+  }
+
+  if (zipCode === "") {
+    cepMessage.innerHTML = "";
+    return;
+  } else if (zipCode.length !== 8) {
+    cepMessage.innerHTML = "Digite apenas os 8 dígitos do CEP!";
     return;
   }
 
@@ -77,15 +86,18 @@ function endereco() {
   fetch(url)
     .then(response => response.json())
     .then(data => {
-      city.value = data.localidade;
-      road.value = data.logradouro;
-      neighborhood.value = data.bairro;
+      if (data.erro) {
+        cepMessage.innerHTML = "CEP não encontrado";
+      } else {
+        city.value = data.localidade;
+        road.value = data.logradouro;
+        neighborhood.value = data.bairro;
+        cepMessage.innerHTML = "";
+      }
     })
-    .catch(error => {
-      console.error("Erro ao buscar endereço:", error);
-      // Exibir mensagem de erro para o usuário
-    });
+    
 }
+
 
 // number.addEventListener("input", celular);
 // function celular(number) {
