@@ -104,8 +104,8 @@ function address() {
 
 let PasswordC = document.getElementById("PasswordC");
 
-PasswordC.addEventListener("input", verificacao);
-function verificacao() {
+PasswordC.addEventListener("input", verification);
+function verification() {
   let password = document.getElementById("password").value;
   let PasswordCValue = PasswordC.value;
   let message = document.getElementById("message");
