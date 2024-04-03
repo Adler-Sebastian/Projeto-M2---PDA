@@ -84,8 +84,8 @@ function address() {
   const url = `https://viacep.com.br/ws/${zipCode}/json/`;
 
   fetch(url)
-    .then(response => response.json())
-    .then(data => {
+    .then((response) => response.json())
+    .then((data) => {
       if (data.erro) {
         cepMessage.innerHTML = "CEP não encontrado";
       } else {
@@ -94,34 +94,29 @@ function address() {
         neighborhood.value = data.bairro;
         cepMessage.innerHTML = "";
       }
-    })
-    
+    });
 }
-const email = document.getElementById('email')
-function validateEmail(email) {
-  var re = /\S+@\S+\.\S+/;
-  return re.test(email);
-}
-
-// number.addEventListener("input", celular);
-// function celular(number) {
-//   if (number.length !== 15) return false;
-//   if (
-//     number[0] !== "(" ||
-//     number[3] !== ")" ||
-//     number[4] !== " " ||
-//     number[10] !== "-"
-//   )
-//     return false;
-//   // Verificar se os caracteres restantes são dígitos
-//   for (let i = 1; i < number.length; i++) {
-//     if (i === 3 || i === 4 || i === 10) continue; // Pula os caracteres que já foram verificados
-//     if (number[i] < "0" || number[i] > "9") return false;
-//   }
-
-//   // Se passou por todas as verificações, o formato é válido
-//   return true;
+// const email = document.getElementById("email");
+// function validateEmail(email) {
+//   let re = /\S+@\S+\.\S+/;
+//   return re.test(email);
 // }
+
+let PasswordC = document.getElementById("PasswordC");
+
+PasswordC.addEventListener("input", verificacao);
+function verificacao() {
+  let password = document.getElementById("password").value;
+  let PasswordCValue = PasswordC.value;
+  let message = document.getElementById("message");
+
+  if (password !== PasswordCValue && PasswordCValue !== "") {
+    message.innerHTML = "As senhas não conferem";
+  } else {
+    message.innerHTML = "";
+  }
+}
+
 // var linkSession = document.getElementById('session');
 // var formCadastro = document.querySelector('main'); // Supondo que você quer esconder todo o <main>
 // var formLogin = document.getElementById('login4');
