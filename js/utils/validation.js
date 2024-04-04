@@ -51,21 +51,20 @@ function cpfValidation() {
     return;
   }
 
-  cpfMessage.innerHTML = "CPF válido.";
+  cpfMessage.innerHTML = "";
 }
 
 $(document).ready(function () {
   //celular
   $("#number").mask("(99) 99999-9999");
 });
-
+const city = document.getElementById("city");
+const neighborhood = document.getElementById("neighborhood");
+const road = document.getElementById("road");
+const cepMessage = document.getElementById("cepMessage");
 zipCode.addEventListener("input", address);
 function address() {
   const zipCode = document.getElementById("zipCode").value;
-  const city = document.getElementById("city");
-  const neighborhood = document.getElementById("neighborhood");
-  const road = document.getElementById("road");
-  const cepMessage = document.getElementById("cepMessage");
 
   if (zipCode.length !== 8) {
     city.value = "";
@@ -112,22 +111,158 @@ function verification() {
   }
 }
 
-
-
-let link = document.getElementById("link")
-let cadastro = document.querySelector(".auth-container"); 
-let loginForm = document.getElementById('toEnter')
-let voltar = document.getElementById('voltarCadastro')
-
+let link = document.getElementById("link");
+let cadastro = document.querySelector(".auth-container");
+let loginForm = document.querySelector(".containerLogin");
+let voltar = document.getElementById("voltarCadastro");
 
 link.addEventListener("click", function (e) {
   e.preventDefault();
-  cadastro.style.display = "none"; 
-  loginForm.style.display = "block"; 
+  cadastro.style.display = "none";
+  loginForm.style.display = "block";
+});
+document.getElementById('voltarCadastro').addEventListener('click', function(e) {
+  e.preventDefault();
+
+  
 });
 
 voltar.addEventListener("click", function (e) {
   e.preventDefault();
-  cadastro.style.display = "block"; 
+  cadastro.style.display = "block";
   loginForm.style.display = "none";
 });
+
+let seePassword = document.getElementById("seePassword");
+let seePassword2 = document.getElementById("seePassword2");
+let password = document.getElementById("password");
+let PasswordLogin = document.getElementById("PasswordLogin");
+let passwordInput = document.getElementById("passwordInput");
+
+seePassword.addEventListener("click", function () {
+  if (password.getAttribute("type") == "password") {
+    password.setAttribute("type", "text");
+  } else {
+    password.setAttribute("type", "password");
+  }
+});
+
+seePassword2.addEventListener("click", function () {
+  if (PasswordC.getAttribute("type") == "password") {
+    PasswordC.setAttribute("type", "text");
+  } else {
+    PasswordC.setAttribute("type", "password");
+  }
+});
+
+PasswordLogin.addEventListener("click", function () {
+  if (passwordInput.getAttribute("type") == "password") {
+    passwordInput.setAttribute("type", "text");
+  } else {
+    passwordInput.setAttribute("type", "password");
+  }
+});
+
+let register = document.querySelector(".register");
+let toClean = document.querySelector(".toClean");
+let formCadastro = document.getElementById("formCadastro");
+
+let name = document.getElementById("name");
+let date = document.getElementById("date");
+let number2 = document.getElementById("number");
+let zipCode2 = document.getElementById("zipCode");
+let login = document.getElementById("login");
+let message = document.getElementById("message");
+let num = document.getElementById("num");
+const dateInput = document.getElementById("date");
+const generoInputs = document.querySelectorAll('input[name="gender"]');
+let generoSelecionado = false;
+let complement = document.getElementById("complement");
+let email = document.getElementById("email");
+
+formCadastro.addEventListener("submit", (event) => {
+  event.preventDefault();
+
+  let generoSelecionado = false;
+  generoInputs.forEach(function (input) {
+    if (input.checked) {
+      generoSelecionado = true;
+    }
+  });
+
+  if (
+    name.value !== "" &&
+    zipCode2.value !== "" &&
+    login.value !== "" &&
+    password.value !== "" &&
+    PasswordC.value !== "" &&
+    city.value !== "" &&
+    neighborhood.value !== "" &&
+    road.value !== "" &&
+    generoSelecionado &&
+    dateInput.value !== "" &&
+    num.value !== "" &&
+    complement.value !== "" &&
+    email.value !== "" &&
+    cpf.value !== ""
+  ) {
+    message.innerHTML = "Cadastrado com sucesso!!";
+    cadastro.style.display = "none";
+    loginForm.style.display = "block";
+  } else {
+    message.innerHTML = "Campos inválidos";
+  }
+});
+
+toClean.addEventListener("click", (event) => {
+  event.preventDefault();
+  name.value = "";
+  login.value = "";
+  login.value = "";
+  zipCode2.value = "";
+  password.value = "";
+  PasswordC.value = "";
+  city.value = "";
+  neighborhood.value = "";
+  road.value = "";
+  generoInputs.forEach((input) => {
+    input.checked = false;
+  });
+  dateInput.value = "";
+  num.value = "";
+  complement.value = "";
+  email.value = "";
+  cepMessage.innerHTML = "";
+  cpfMessage.innerHTML = "";
+  number2.value = "";
+  cpf.value = "";
+  
+});
+
+
+let logar = document.getElementById('logar')
+let limpar = document.getElementById('limpar')
+let inputLogin = document.getElementById('inputLogin')
+let messageLogin = document.getElementById('messageLogin')
+
+limpar.addEventListener('click', function(event){
+  event.preventDefault();
+
+  inputLogin.value=""
+  passwordInput.value=""
+  messageLogin.innerHTML = ""
+});
+
+logar.addEventListener("click", function(event)
+{
+  event.preventDefault();
+  if (
+    inputLogin.value !== "" &&
+    passwordInput.value !== "" 
+   
+  ) {
+    messageLogin.innerHTML = "Cadastrado com sucesso!!"
+  } else {
+    messageLogin.innerHTML = "Campos inválidos";
+  }
+})
