@@ -6,14 +6,22 @@
   box-sizing: border-box;
   font-family: Arial, Helvetica, sans-serif;
 }
-main {
+.oi{
+  background-color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 50px;  
+}
+
+.registration-form {
   background-color: white;
   display: flex;
   justify-content: center;
   align-items: center;
   padding: 50px;
 }
-form {
+#formCadastro{
   width: 35%;
   max-width: 600px;
   padding: 3rem;
@@ -64,9 +72,25 @@ button {
   border: none;
   border-radius: 5px;
   cursor: pointer;
-  /* transition: background-color 0.3s ease; */
   margin-top: 10px;
 }
-#login4 {
+#toEnter {
   display: none;
+}
+
+#cpfMessage, #cepMessage,  #message{
+  margin-top: 10px;
+}
+.fa-eye {
+  position: absolute;
+  top: 50%;
+  font-size: 20px;
+  right: 10px;
+  transform: translateY(-50%);
+  cursor: pointer;
+  z-index: 2; 
+}
+
+.password-container{
+  position: relative;
 }

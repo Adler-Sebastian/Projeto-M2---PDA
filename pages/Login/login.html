@@ -5,16 +5,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Cadastro/Login</title>
     <link rel="stylesheet" href="login.module.css" />
-
+    <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+  />
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.16/jquery.mask.min.js"></script>
 
 
   </head>
   <body>
-    <section>
-      <main>
-        <form id="" action="#">
+    <section class="auth-container">
+      <main class="registration-form">
+        <form id="formCadastro" action="#">
           <label class="labelForm" for="name" > Nome Completo:</label>
           <input
             class="input_form"
@@ -238,7 +241,7 @@
           </div>  <div id="message"></div>
           <div class="account">
             <p>Já possui uma conta?</p>
-            <a href="#" class="session" id="session">Iniciar sessão</a>
+            <a href="#" class="session" id="link">Iniciar sessão</a>
           </div>
         
 
@@ -249,12 +252,15 @@
         </form>
       </main>
     </section>
-<section>
-  <form action="" id="login4">
-    <label for="">Login</label>
-    <input type="text">
-    <label for=""> Senha</label>
-    <input type="text">
+<section class="oi">
+  <form action="" id="toEnter">
+    <label class="labelForm" for="">Login</label>
+    <input class="input_form" type="text">
+    <label class="labelForm"  for=""> Senha</label>
+    <input class="input_form" type="text">
+    <!-- Dentro do seu formulário de login -->
+<a href="#" id="voltarCadastro">Voltar ao Cadastro</a>
+
   </form>
 </section>
     <script src="../../js/utils/validation.js"></script>

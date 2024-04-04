@@ -96,11 +96,6 @@ function address() {
       }
     });
 }
-// const email = document.getElementById("email");
-// function validateEmail(email) {
-//   let re = /\S+@\S+\.\S+/;
-//   return re.test(email);
-// }
 
 let PasswordC = document.getElementById("PasswordC");
 
@@ -117,20 +112,22 @@ function verification() {
   }
 }
 
-// var linkSession = document.getElementById('session');
-// var formCadastro = document.querySelector('main'); // Supondo que você quer esconder todo o <main>
-// var formLogin = document.getElementById('login4');
 
-// linkSession.addEventListener('click', function(e) {
-//   e.preventDefault(); // Impede o comportamento padrão do link
-//   formCadastro.style.display = 'none'; // Esconde o form de cadastro
-//   formLogin.style.display = 'block'; // Mostra o form de login
-// });
 
-// // Opcional: Adicione um botão ou link no seu form de login para voltar ao cadastro
-// // Aqui estou assumindo que você adicionou um botão com id="voltarCadastro"
-// document.getElementById('voltarCadastro').addEventListener('click', function(e) {
-//   e.preventDefault();
-//   formLogin.style.display = 'none'; // Esconde o form de login
-//   formCadastro.style.display = 'block'; // Mostra o form de cadastro novamente
-// });
+let link = document.getElementById("link")
+let cadastro = document.querySelector(".auth-container"); 
+let loginForm = document.getElementById('toEnter')
+let voltar = document.getElementById('voltarCadastro')
+
+
+link.addEventListener("click", function (e) {
+  e.preventDefault();
+  cadastro.style.display = "none"; 
+  loginForm.style.display = "block"; 
+});
+
+voltar.addEventListener("click", function (e) {
+  e.preventDefault();
+  cadastro.style.display = "block"; 
+  loginForm.style.display = "none";
+});
