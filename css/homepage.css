@@ -4,3 +4,51 @@
     padding: 0;
     box-sizing: border-box;
 }
+/** Estilização do fundo da página **/
+body {
+    height: 100vh;
+    background: url("/images/fundosite.jpg");
+    background-position: center;
+    background-size: cover;
+}
+
+/** Estilização do cabeçalho **/
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px;
+}
+
+/** Estilização da barra de navegação **/
+header .navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.navbar .name {
+    font-size: 2.1rem;
+    font-weight: 600;
+}
+
+.navbar .name span {
+    color: #011936;
+}
+
+.navbar .menulinks {
+    display: flex;
+    gap: 40px;
+}
+
+.navbar a {
+    color: #000;
+    text-decoration: none;
+    transition: 0.2s ease;
+}
+.navbar a:hover {
+    color: #F18F01;
+}
