@@ -42,6 +42,8 @@ header .navbar {
 .navbar .menulinks {
     display: flex;
     gap: 40px;
+    font-size: 18px;
+    list-style: none;
 }
 
 .navbar a {
@@ -50,7 +52,7 @@ header .navbar {
     transition: 0.2s ease;
 }
 .navbar a:hover {
-    color: #F18F01;
+    color: #EC9F18;
 }
 
 /** Estilização das seções da home**/
@@ -77,6 +79,7 @@ header .navbar {
     font-weight: 300;
     margin-top: 15px;
     max-width: 600px;
+    text-align: justify;
 }
 
 /** Estilização dos botões da home**/
