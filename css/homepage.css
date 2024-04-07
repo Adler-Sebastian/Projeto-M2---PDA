@@ -52,3 +52,48 @@ header .navbar {
 .navbar a:hover {
     color: #F18F01;
 }
+
+/** Estilização das seções da home**/
+.content-section {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    padding: 0 20px;
+}
+
+.content-section .content {
+    color: #000;
+    max-width: 1200px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.content-section .content h1 {
+    font-size: 3rem;
+    max-width: 600px;
+}
+
+.content-section .content p {
+    font-weight: 300;
+    margin-top: 15px;
+    max-width: 600px;
+}
+
+/** Estilização dos botões da home**/
+.content-section .content button {
+    color: #fff;
+    background: #011936;
+    outline: none;
+    border: none;
+    font-size: 1rem;
+    font-weight: 500;
+    margin-top: 36px;
+    padding: 12px 30px;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: 0.2s ease;
+}
+
+.content-section .content button:hover {
+    background:#F18F01;
+}
