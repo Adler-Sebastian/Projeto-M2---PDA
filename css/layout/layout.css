@@ -1,10 +1,12 @@
 :root {
     /* Paleta de cores principal da marca */
-    --primary-blue: #0ea8ff;
-    --primary-pink: #ff81f3;
-    --primary-Wax-Flower: #ffc4b1;
-    --primary-Portafino: #fffbb5;
-    --primary-Bridal-Heath: #fffbf3;
+    --celeste: #b5f8feff;
+    --cornflower: #6495edff;
+    --oxford-blue: #011936ff;
+    --carrot-orange: #f18f01ff;
+    --gamboge: #ec9f18ff;
+    --xanthous: #e6af2eff;
+
     --primary-white: #fff;
     --primary-black: #000;
 }
