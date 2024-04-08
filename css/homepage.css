@@ -31,6 +31,7 @@ header .navbar {
 }
 
 .navbar .name {
+    color: #011936;
     font-size: 2.1rem;
     font-weight: 600;
 }
@@ -99,4 +100,43 @@ header .navbar {
 
 .content-section .content button:hover {
     background:#F18F01;
+}
+
+/** Estilização dos icons da home**/
+#close-icon {
+    color: #fff;
+    display: none;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    cursor: pointer;
+}
+
+#menu-icon {
+    display: none;
+    color: #011936;
+    cursor: pointer;
+}
+
+/** Responsividade da navbar e aplicação do menu lateral **/
+@media screen and (max-width: 900px){
+    .navbar a {
+        color: #fff;
+    }
+    
+    
+    .navbar .menulinks {
+        position: fixed;
+        top: 0;
+        left: -260px;
+        width: 260px;
+        height: 100vh;
+        padding: 70px 40px 0;
+        background: #011936;
+        flex-direction: column;
+    }
+
+    #close-icon, #menu-icon {
+        display: block;
+    }
 }
