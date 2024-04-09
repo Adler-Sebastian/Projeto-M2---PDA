@@ -4,8 +4,14 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: Arial, Helvetica, sans-serif;
 }
+/** Estilização do fundo da página **/
+body {
+  height: 100vh;
+  background-position: center;
+  background-size: cover;
+}
+
 #mainLogin {
   position: absolute;
   top: 50%;
@@ -52,13 +58,21 @@
   flex-direction: column;
 }
 
-.divGender label {
+.genderOption {
+  display: flex;
+  align-items: center; 
+  margin-bottom: 5px; 
+}
 
-  margin-bottom: 5px;
+.gender, .option {
+  margin-right: 10px; 
 }
-.gender {
-  margin-left: 20px;
+
+
+.divGender > .genderOption:last-child {
+  margin-bottom: 0;
 }
+
 /* parte final login/button */
 .account {
   display: flex;
@@ -70,7 +84,7 @@
 }
 button {
   padding: 10px 20px;
-  background-color: #405b39;
+  background-color: #6495ed;
   color: #fff;
   border: none;
   border-radius: 5px;
@@ -96,4 +110,94 @@ button {
 
 .password-container{
   position: relative;
+}
+
+header {
+ 
+  width: 100%;
+  padding: 20px;
+}
+
+/** Estilização da barra de navegação **/
+header .navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.navbar .name {
+  color: #011936;
+  font-size: 2.1rem;
+  font-weight: 600;
+}
+
+.navbar .name span {
+  color: #F18F01;
+}
+
+.navbar .menulinks {
+  display: flex;
+  gap: 40px;
+  font-size: 18px;
+  list-style: none;
+}
+
+.navbar a {
+  color: #000;
+  text-decoration: none;
+  transition: 0.2s ease;
+}
+.navbar a:hover {
+  color: #EC9F18;
+}
+
+/* Estilos básicos */
+
+@media screen and (max-width: 900px) {
+  #formCadastro {
+    width: 90%;
+    padding: 2rem;
+  }
+
+  .navbar .menulinks {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  header .navbar {
+    flex-direction: column;
+  }
+
+  .registration-form {
+    padding: 20px;
+  }
+
+  .password-container i {
+    right: 5px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .navbar .name {
+    font-size: 1.8rem;
+  }
+
+  .navbar .menulinks {
+    font-size: 16px;
+  }
+
+  button {
+    padding: 8px 16px;
+  }
+
+  
+  .account p, .account a {
+    margin: 5px 0; 
+  }
+
+  .password-container i {
+    font-size: 18px;
+  }
 }

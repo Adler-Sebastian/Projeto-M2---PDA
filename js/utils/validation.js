@@ -1,11 +1,11 @@
-const cpf = document.getElementById("cpf");
-const cpfMessage = document.getElementById("cpfMessage");
-const number = document.getElementById("number");
+let cpf = document.getElementById("cpf");
+let cpfMessage = document.getElementById("cpfMessage");
+let number = document.getElementById("number");
 
 cpf.addEventListener("input", cpfValidation);
 function cpfValidation() {
-  const cpfInput = cpf.value;
-  const cpfDigits = cpfInput.replace(/\D/g, "");
+  let cpfInput = cpf.value;
+  let cpfDigits = cpfInput.replace(/\D/g, "");
 
   if (cpfDigits.length !== 11) {
     cpfMessage.innerHTML = "Deve conter exatamente 11 dígitos.";
@@ -58,13 +58,13 @@ $(document).ready(function () {
   //celular
   $("#number").mask("(99) 99999-9999");
 });
-const city = document.getElementById("city");
-const neighborhood = document.getElementById("neighborhood");
-const road = document.getElementById("road");
-const cepMessage = document.getElementById("cepMessage");
+let city = document.getElementById("city");
+let neighborhood = document.getElementById("neighborhood");
+let road = document.getElementById("road");
+let cepMessage = document.getElementById("cepMessage");
 zipCode.addEventListener("input", address);
 function address() {
-  const zipCode = document.getElementById("zipCode").value;
+  let zipCode = document.getElementById("zipCode").value;
 
   if (zipCode.length !== 8) {
     city.value = "";
@@ -80,7 +80,7 @@ function address() {
     return;
   }
 
-  const url = `https://viacep.com.br/ws/${zipCode}/json/`;
+  let url = `https://viacep.com.br/ws/${zipCode}/json/`;
 
   fetch(url)
     .then((response) => response.json())
@@ -121,11 +121,11 @@ link.addEventListener("click", function (e) {
   cadastro.style.display = "none";
   loginForm.style.display = "block";
 });
-document.getElementById('voltarCadastro').addEventListener('click', function(e) {
-  e.preventDefault();
-
-  
-});
+document
+  .getElementById("voltarCadastro")
+  .addEventListener("click", function (e) {
+    e.preventDefault();
+  });
 
 voltar.addEventListener("click", function (e) {
   e.preventDefault();
@@ -174,8 +174,8 @@ let zipCode2 = document.getElementById("zipCode");
 let login = document.getElementById("login");
 let message = document.getElementById("message");
 let num = document.getElementById("num");
-const dateInput = document.getElementById("date");
-const generoInputs = document.querySelectorAll('input[name="gender"]');
+let dateInput = document.getElementById("date");
+let generoInputs = document.querySelectorAll('input[name="gender"]');
 let generoSelecionado = false;
 let complement = document.getElementById("complement");
 let email = document.getElementById("email");
@@ -206,6 +206,14 @@ formCadastro.addEventListener("submit", (event) => {
     email.value !== "" &&
     cpf.value !== ""
   ) {
+    let user = JSON.parse(localStorage.getItem("user") || "[]");
+    user.push({
+      nameLocalStorage: name.value,
+      nameLogin: login.value,
+      passwordLocalStorage: password.value,
+    });
+    localStorage.setItem("user", JSON.stringify(user));
+
     message.innerHTML = "Cadastrado com sucesso!!";
     cadastro.style.display = "none";
     loginForm.style.display = "block";
@@ -234,35 +242,48 @@ toClean.addEventListener("click", (event) => {
   email.value = "";
   cepMessage.innerHTML = "";
   cpfMessage.innerHTML = "";
+  message.innerHTML = ''
   number2.value = "";
   cpf.value = "";
-  
 });
 
+let logar = document.getElementById("logar");
+let toCleanLogin = document.getElementById("toCleanLogin");
+let inputLogin = document.getElementById("inputLogin");
+let messageLogin = document.getElementById("messageLogin");
 
-let logar = document.getElementById('logar')
-let limpar = document.getElementById('limpar')
-let inputLogin = document.getElementById('inputLogin')
-let messageLogin = document.getElementById('messageLogin')
-
-limpar.addEventListener('click', function(event){
+toCleanLogin.addEventListener("click", function (event) {
   event.preventDefault();
 
-  inputLogin.value=""
-  passwordInput.value=""
-  messageLogin.innerHTML = ""
+  inputLogin.value = "";
+  passwordInput.value = "";
+  messageLogin.innerHTML = "";
 });
 
-logar.addEventListener("click", function(event)
-{
+logar.addEventListener("click", function (event) {
   event.preventDefault();
-  if (
-    inputLogin.value !== "" &&
-    passwordInput.value !== "" 
-   
-  ) {
-    messageLogin.innerHTML = "Cadastrado com sucesso!!"
-  } else {
-    messageLogin.innerHTML = "Campos inválidos";
-  }
-})
+  let listaUser = [];
+  let valid = {
+    user: "",
+    senha: "",
+  };
+  listaUser = JSON.parse(localStorage.getItem("user"));
+
+  listaUser.forEach((item) => {
+    if (
+      inputLogin.value == item.nameLogin &&
+      passwordInput.value == item.passwordLocalStorage
+    ) {
+      valid = {
+        user: item.nameLogin,
+        senha: item.passwordLocalStorage,
+      };
+    }
+  });
+  if(inputLogin.value == valid.user && passwordInput.value == valid.senha && valid.user != "" && valid.senha != ""){
+    window.location.href = '../Dashboard/Dashboard.html';
+} else {
+    messageLogin.innerHTML='Usuário não encontrado';
+}
+
+});

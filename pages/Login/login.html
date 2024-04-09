@@ -13,6 +13,15 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.16/jquery.mask.min.js"></script>
   </head>
   <body>
+    <header>    
+      <nav class="navbar">
+          <a href="#" class="name">Bridge to Diversity<span>.</span></a>
+          <ul class="menulinks">
+              <li><a href="../../index.html">Home</a></li>
+              <li><a href="../Blog/blog.html">Blog</a></li>
+          </ul>
+      </nav>
+  </header>
     <section class="auth-container">
       <main class="registration-form">
         <form id="formCadastro" action="#">
@@ -30,64 +39,33 @@
           <input class="input_form" type="date" id="date" name="date" />
 
           <div class="divGender">
-            <label for="gender" class="labelForm"> Genêro:</label>
-
-            <input
-              type="radio"
-              id="cisgenderW"
-              class="gender"
-              name="gender"
-              value="cisgenderWoman"
-            />
-            <label class="option" for="cisgenderWoman">Mulher cisgênero</label>
-            <input
-              type="radio"
-              id="transgenderWoman"
-              class="gender"
-              name="gender"
-              value="transgenderWoman"
-            />
-            <label class="option" for="transgenderWoman">
-              Mulher transgênero</label
-            >
-
-            <input
-              type="radio"
-              id="cisgenderMan"
-              name="gender"
-              class="gender"
-              value="cisgenderMan"
-            />
-            <label class="option" for="cisgenderMan">Homem cisgênero</label>
-
-            <input
-              type="radio"
-              id="TransgenderMan"
-              name="gender"
-              class="gender"
-              value="TransgenderMan"
-            />
-
-            <label class="option" for="TransgenderMan">Homem transgênero</label>
-
-            <input
-              type="radio"
-              id="binary"
-              name="gender"
-              value="non-binary"
-              class="gender"
-            />
-            <label class="option" for="non_binary">Não-binário</label>
-
-            <input
-              type="radio"
-              id="outro"
-              name="gender"
-              value="outro"
-              class="gender"
-            />
-            <label class="option" for="other">Outros</label>
+            <label for="gender" class="labelForm">Gênero:</label>
+            <div class="genderOption">
+              <input type="radio" id="cisgenderW" class="gender" name="gender" value="cisgenderWoman" />
+              <label class="option" for="cisgenderW">Mulher cisgênero</label>
+            </div>
+            <div class="genderOption">
+              <input type="radio" id="transgenderWoman" class="gender" name="gender" value="transgenderWoman" />
+              <label class="option" for="transgenderWoman">Mulher transgênero</label>
+            </div>
+            <div class="genderOption">
+              <input type="radio" id="cisgenderMan" class="gender" name="gender" value="cisgenderMan" />
+              <label class="option" for="cisgenderMan">Homem cisgênero</label>
+            </div>
+            <div class="genderOption">
+              <input type="radio" id="transgenderMan" class="gender" name="gender" value="transgenderMan" />
+              <label class="option" for="transgenderMan">Homem transgênero</label>
+            </div>
+            <div class="genderOption">
+              <input type="radio" id="nonBinary" class="gender" name="gender" value="non-binary" />
+              <label class="option" for="nonBinary">Não-binário</label>
+            </div>
+            <div class="genderOption">
+              <input type="radio" id="other" class="gender" name="gender" value="other" />
+              <label class="option" for="other">Outros</label>
+            </div>
           </div>
+          
 
           <label for="cpf" class="labelForm">CPF:</label>
           <input
@@ -270,7 +248,7 @@
         <button type="submit" id="logar">
           Logar
         </button>
-        <button id="limpar">Limpar</button>
+        <button id="toCleanLogin">Limpar</button>
       </main>
     </section>
     <script src="../../js/utils/validation.js"></script>
