@@ -2,7 +2,6 @@
   width: auto !important;
   height: auto !important;
   margin: 0 auto;
-  font-family: Arial, sans-serif;
 }
 
 .header {
@@ -21,10 +20,12 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    font-size: 12px;
 }
 
 .header i {
   color: #fff;
+  font-size: 10px;
 }
 
 #prevMonth,
@@ -39,7 +40,7 @@
     padding: 0 7px 0 7px;
   display: flex;
   justify-content: space-between;
-  font-size: 15px;
+  font-size: 13px;
   font-weight: 600;
   color: #ffffff50;
   grid-column-gap: 10px;
@@ -52,20 +53,20 @@
 }
 
 .today {
-  background-color: rgb(0, 255, 42);
+  background-color: #6495ed;
   color: rgb(0, 0, 0);
   font-weight: bold;
 }
 
 .selected {
-  background-color: rgb(255, 255, 0);
+  background-color: #6494ed62;
   color: rgb(0, 0, 0);
   font-weight: bold;
 }
 
 .day {
-  width: 2em;
-  height: 2em;
+  width: 1.5em;
+  height: 1.5em;
   border: 0.1px solid #cccccc1f;
   border-radius: 50%;
   padding: 5px;
