@@ -63,6 +63,10 @@ header .navbar {
     gap: 220px;
 }
 
+.title{
+    margin-bottom: 20px;
+}
+
 .Image-blog{
     width: 350px;
     height: 350px;
@@ -80,4 +84,31 @@ header .navbar {
     border: none;
     border-radius: 5px;
     cursor: pointer;
+}
+
+.register:hover{
+    color: #F18F01;
+}
+
+.complete-card{
+display: flex;
+}
+
+.container-card{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 40px 80px;
+
+}
+
+.img-card{
+    width: 300px;
+    height: 300px;
+}
+
+.text-card{
+    width: 250px;
+    margin-left: 20px;
+    margin-top: 80px;
 }
