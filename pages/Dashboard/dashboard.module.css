@@ -3,6 +3,7 @@
     padding: 0;
     box-sizing: border-box;
     font-family: Arial, sans-serif;
+    border: red 1px solid;
 }
 
 :root {
@@ -38,6 +39,7 @@ body {
     overflow: hidden;
     color: #3b74dd50;
 }
+
 
 .dashboard-container {
     display: flex;
@@ -178,6 +180,23 @@ body {
     flex-direction: column;
     overflow: auto;
 }
+
+.right-content::-webkit-scrollbar {
+    width: 6px;   
+            
+  }
+  
+.right-content::-webkit-scrollbar-track {
+    background: none;  
+      
+  }
+  
+.right-content::-webkit-scrollbar-thumb {
+    background-color: var(--gamboge);   
+    border-radius: 20px;       
+    border: 1px solid orange;  
+  }
+
 
 .navbar {
     display: flex;
@@ -326,6 +345,7 @@ body {
     gap: 20px;
     width: 100%;
     height: auto; 
+    max-height: 500px;
     padding: 20px;
     flex: 3;
     border-radius: 20px;
@@ -426,8 +446,47 @@ canvas {
 
 
 #relatoriosPage  {
-    background-color: #914343;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    gap: 20px;
+    background-color: var(--oxford-blue);
+    background-image: url("/assets/icone-cercle-rempli-orange.png");
+    background-repeat: no-repeat;
+    background-position: calc(100% + 110px);
+    background-size: 750px 750px;
+    @media (max-width: 950px) {
+        flex-direction: column;
+        background-position: 50% -50%;
+    }
 }
+
+.relatorio-text {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    height: auto; 
+    padding: 20px;
+    border-radius: 20px;
+}
+
+#relatoriosPage h2 {
+    color: #fff;
+}
+
+#relatoriosPage h1 {
+    font-weight: 600;
+    color: var(--primary-white);
+    gap: 5px;
+    font-size: 30px;
+}
+
+#relatoriosPage p {
+    font-weight: 400;
+    color: rgb(231, 231, 231);
+    font-size: 15px;
+}
+
 
 #graficosPage {
     background-color: #03ff18;

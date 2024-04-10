@@ -10,6 +10,16 @@
 
     --primary-white: #fff;
     --primary-black: #000;
+    --primary-blue: #007bff;
+    --primary-indigo: #6610f2ff;
+    --primary-purple: #6f42c1ff;
+    --primary-pink: #e83e8cff;
+    --primary-red: #dc3545ff;
+    --primary-orange: #fd7e14ff;
+    --primary-yellow: #ffc107ff;
+    --primary-green: #28a745ff;
+    --primary-teal: #20c997ff;
+    --primary-cyan: #17a2b8ff;
 }
 
 li {

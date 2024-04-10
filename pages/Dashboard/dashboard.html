@@ -1,225 +1,288 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="dashboard.module.css" />
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Dashboard</title>
-  <link rel="stylesheet" href="dashboard.module.css" />
+    <!-- biblioteca de icones -->
+    <link
+      rel="stylesheet"
+      href="https://cdn-uicons.flaticon.com/2.2.0/uicons-bold-rounded/css/uicons-bold-rounded.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn-uicons.flaticon.com/2.2.0/uicons-regular-rounded/css/uicons-regular-rounded.css"
+    />
 
-  <link rel="stylesheet" href="https://cdn-uicons.flaticon.com/2.2.0/uicons-bold-rounded/css/uicons-bold-rounded.css" />
-  <link rel="stylesheet"
-    href="https://cdn-uicons.flaticon.com/2.2.0/uicons-regular-rounded/css/uicons-regular-rounded.css" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
-  <script src='https://cdn.jsdelivr.net/npm/fullcalendar@6.1.11/index.global.min.js'></script>
+    <!-- biblioteca de tooltips -->
+    <script src="https://unpkg.com/@popperjs/core@2/dist/umd/popper.min.js"></script>
+    <script src="https://unpkg.com/tippy.js@6/dist/tippy-bundle.umd.js"></script>
 
+    <!-- componentes css -->
+    <link rel="stylesheet" href="/css/components/calendar.css" />
+    <link rel="stylesheet" href="/css/components/todoList.css" />
 
-  <!-- Development -->
-  <script src="https://unpkg.com/@popperjs/core@2/dist/umd/popper.min.js"></script>
-  <script src="https://unpkg.com/tippy.js@6/dist/tippy-bundle.umd.js"></script>
+    <!-- animações -->
+    <link rel="stylesheet" href="/css/animations/manutencao.css" />
+  </head>
 
-
-  <!-- componentes css -->
-  <link rel="stylesheet" href="/css/components/calendar.css">
-  <link rel="stylesheet" href="/css/components/todoList.css">
-
-</head>
-
-<body>
-  <section class="dashboard-container">
-    <aside class="sidebar">
-      <div class="logo">
-        <i class="fi fi-rr-home"></i>
-        <h2>Logo</h2>
-      </div>
-
-      <hr />
-      <ul class="menu">
-        <li id="dashboard">
-          <input type="radio" id="dashboardRadio" name="page" value="dashboard" class="menu-radio " checked />
-          <label for="dashboardRadio">
-            <i class="fi fi-rr-dashboard"></i>
-            <span class="text-link">Dashboard</span>
-          </label>
-        </li>
-        <li id="relatorios">
-          <input type="radio" id="relatoriosRadio" name="page" value="relatorios" class="menu-radio" />
-          <label for="relatoriosRadio"><i class="fi fi-rr-file-medical-alt"></i><span
-              class="text-link">Relatórios</span></label>
-        </li>
-        <li id="graficos">
-          <input type="radio" id="graficosRadio" name="page" value="graficos" class="menu-radio" />
-          <label for="graficosRadio"><i class="fi fi-br-chart-simple"></i><span
-              class="text-link">Gráficos</span></label>
-        </li>
-        <li id="time">
-          <input type="radio" id="timeRadio" name="page" value="time" class="menu-radio" />
-          <label for="timeRadio"><i class="fi fi-rr-users-alt"></i><span class="text-link">Time</span></label>
-        </li>
-      </ul>
-
-      <hr />
-
-      <ul>
-        <li id="conf">
-          <a href="#"><i class="fi fi-rr-settings-sliders"></i><span class="text-link">Configurações</span></a>
-        </li>
-        <li id="quit">
-          <a href="#"><i class="fi fi-rr-sign-out-alt"></i><span class="text-link">Sair</span></a>
-        </li>
-      </ul>
-
-      <hr />
-
-      <div class="profile">
-        <div class="avatar">
-          <i class="fi fi-rr-circle-user" style="font-size: 30px"></i>
-          <!-- <img src="/images/avatar.png" alt="avatar"> -->
+  <body>
+    <section class="dashboard-container">
+      <aside class="sidebar">
+        <div class="logo">
+          <i class="fi fi-rr-home"></i>
+          <h2>Logo</h2>
         </div>
-        <div class="user-info">
-          <h3>Nome</h3>
-          <h6>Cargo</h6>
-        </div>
-      </div>
-    </aside>
 
-    <div class="right-content">
-      <nav class="navbar">
-        <h5>Dashboard</h5>
-        <ul class="links-navbar">
-          <li>
-            <a href="#"><i class="fi fi-rr-envelope"></i></a>
+        <hr />
+        <ul class="menu">
+          <li id="dashboard">
+            <input
+              type="radio"
+              id="dashboardRadio"
+              name="page"
+              value="dashboard"
+              class="menu-radio"
+              checked
+            />
+            <label for="dashboardRadio">
+              <i class="fi fi-rr-dashboard"></i>
+              <span class="text-link">Dashboard</span>
+            </label>
           </li>
-          <li>
-            <a href="#"><i class="fi fi-rr-bell"></i></a>
+          <li id="relatorios">
+            <input
+              type="radio"
+              id="relatoriosRadio"
+              name="page"
+              value="relatorios"
+              class="menu-radio"
+            />
+            <label for="relatoriosRadio"
+              ><i class="fi fi-rr-file-medical-alt"></i
+              ><span class="text-link">Relatórios</span></label
+            >
           </li>
-          <li>
-            <a href="#"><i class="fi fi-rr-circle-user" style="font-size: 24px"></i>Perfil</a>
+          <li id="graficos">
+            <input
+              type="radio"
+              id="graficosRadio"
+              name="page"
+              value="graficos"
+              class="menu-radio"
+            />
+            <label for="graficosRadio"
+              ><i class="fi fi-br-chart-simple"></i
+              ><span class="text-link">Gráficos</span></label
+            >
+          </li>
+          <li id="time">
+            <input
+              type="radio"
+              id="timeRadio"
+              name="page"
+              value="time"
+              class="menu-radio"
+            />
+            <label for="timeRadio"
+              ><i class="fi fi-rr-users-alt"></i
+              ><span class="text-link">Time</span></label
+            >
           </li>
         </ul>
-      </nav>
 
-      <main class="main-content">
-        <section id="dashboardPage" class="page-content">
-          <ul class="totalizing-cards">
-            <li class="card-resume">
-              <div class="card-resume-content">
-                <div class="resume-text">
-                  <h5>Total de Capital</h5>
-                </div>
-                <div class="resume-number">
-                  <h3>R$23,000</h3>
-                  <span>+32%</span>
-                </div>
-              </div>
-              <div class="card-resume-icon">
-                <i class="fi fi-rr-wallet"></i>
-              </div>
+        <hr />
+
+        <ul>
+          <li id="conf">
+            <a href="#"
+              ><i class="fi fi-rr-settings-sliders"></i
+              ><span class="text-link">Configurações</span></a
+            >
+          </li>
+          <li id="quit">
+            <a href="#"
+              ><i class="fi fi-rr-sign-out-alt"></i
+              ><span class="text-link">Sair</span></a
+            >
+          </li>
+        </ul>
+
+        <hr />
+
+        <div class="profile">
+          <div class="avatar">
+            <i class="fi fi-rr-circle-user" style="font-size: 30px"></i>
+            <!-- <img src="/images/avatar.png" alt="avatar"> -->
+          </div>
+          <div class="user-info">
+            <h3>Nome</h3>
+            <h6>Cargo</h6>
+          </div>
+        </div>
+      </aside>
+
+      <div class="right-content">
+        <nav class="navbar">
+          <h5>Dashboard</h5>
+          <ul class="links-navbar">
+            <li>
+              <a href="#"><i class="fi fi-rr-envelope"></i></a>
             </li>
-            <li class="card-resume">
-              <div class="card-resume-content">
-                <div class="resume-text">
-                  <h5>Total de Usuarios</h5>
-                </div>
-                <div class="resume-number">
-                  <h3>1.234</h3>
-                  <span>+4%</span>
-                </div>
-              </div>
-              <div class="card-resume-icon">
-                <i class="fi fi-rr-users-alt"></i>
-              </div>
+            <li>
+              <a href="#"><i class="fi fi-rr-bell"></i></a>
             </li>
-            <li class="card-resume">
-              <div class="card-resume-content">
-                <div class="resume-text">
-                  <h5>Total de Novos Clientes</h5>
-                </div>
-                <div class="resume-number">
-                  <h3>500</h3>
-                  <span>+20%</span>
-                </div>
-              </div>
-              <div class="card-resume-icon">
-                <i class="fi fi-rr-user-add"></i>
-              </div>
-            </li>
-            <li class="card-resume">
-              <div class="card-resume-content">
-                <div class="resume-text">
-                  <h5>Total de Vendas</h5>
-                </div>
-                <div class="resume-number">
-                  <h3>2.543</h3>
-                  <span>+50%</span>
-                </div>
-              </div>
-              <div class="card-resume-icon">
-                <i class="fi fi-rr-selling"></i>
-              </div>
+            <li>
+              <a href="#"
+                ><i class="fi fi-rr-circle-user" style="font-size: 24px"></i
+                >Perfil</a
+              >
             </li>
           </ul>
+        </nav>
 
-          <div class="general-info">
-            <div class="total-revenue">
-              <div class="revenue-title">
-                <h5>Rendimento total</h5>
-                <div class="revenue-number">
-                  <h1 id="revenue-profit"></h1>
-                  <span id="revenue-porcent">+43%</span>
-                </div>
-              </div>
-              <canvas id="canvas"></canvas>
-            </div>
-            <div class="right-general">
-              <div class="total-calendar">
-                <div class="calendar">
-                  <div class="header">
-                    <div class="header-buttons">
-                      <button id="prevMonth"><i class="fi fi-rr-angle-left"></i></button>
-                      <h2 id="currentMonthYear"></h2>
-                      <button id="nextMonth"><i class="fi fi-rr-angle-right"></i></button>
-                    </div>
-                    <div class="days-week"></div>
-                    <hr>
+        <main class="main-content">
+          <section id="dashboardPage" class="page-content">
+            <ul class="totalizing-cards">
+              <li class="card-resume">
+                <div class="card-resume-content">
+                  <div class="resume-text">
+                    <h5>Total de Capital</h5>
                   </div>
-                  <div class="days"></div>
+                  <div class="resume-number">
+                    <h3>R$23,000</h3>
+                    <span>+32%</span>
+                  </div>
+                </div>
+                <div class="card-resume-icon">
+                  <i class="fi fi-rr-wallet"></i>
+                </div>
+              </li>
+              <li class="card-resume">
+                <div class="card-resume-content">
+                  <div class="resume-text">
+                    <h5>Total de Usuarios</h5>
+                  </div>
+                  <div class="resume-number">
+                    <h3>1.234</h3>
+                    <span>+4%</span>
+                  </div>
+                </div>
+                <div class="card-resume-icon">
+                  <i class="fi fi-rr-users-alt"></i>
+                </div>
+              </li>
+              <li class="card-resume">
+                <div class="card-resume-content">
+                  <div class="resume-text">
+                    <h5>Total de Novos Clientes</h5>
+                  </div>
+                  <div class="resume-number">
+                    <h3>500</h3>
+                    <span>+20%</span>
+                  </div>
+                </div>
+                <div class="card-resume-icon">
+                  <i class="fi fi-rr-user-add"></i>
+                </div>
+              </li>
+              <li class="card-resume">
+                <div class="card-resume-content">
+                  <div class="resume-text">
+                    <h5>Total de Vendas</h5>
+                  </div>
+                  <div class="resume-number">
+                    <h3>2.543</h3>
+                    <span>+50%</span>
+                  </div>
+                </div>
+                <div class="card-resume-icon">
+                  <i class="fi fi-rr-selling"></i>
+                </div>
+              </li>
+            </ul>
+
+            <div class="general-info">
+              <div class="total-revenue">
+                <div class="revenue-title">
+                  <h5>Rendimento total</h5>
+                  <div class="revenue-number">
+                    <h1 id="revenue-profit"></h1>
+                    <span id="revenue-porcent">+43%</span>
+                  </div>
+                </div>
+                <canvas id="canvas"></canvas>
+              </div>
+              <div class="right-general">
+                <div class="total-calendar">
+                  <div class="calendar">
+                    <div class="header">
+                      <div class="header-buttons">
+                        <button id="prevMonth">
+                          <i class="fi fi-rr-angle-left"></i>
+                        </button>
+                        <h2 id="currentMonthYear"></h2>
+                        <button id="nextMonth">
+                          <i class="fi fi-rr-angle-right"></i>
+                        </button>
+                      </div>
+                      <div class="days-week"></div>
+                      <hr />
+                    </div>
+                    <div class="days"></div>
+                  </div>
+                </div>
+                <div class="total-list">
+                  <h1 class="todo-title">Lista de Tarefas</h1>
+                  <form id="todo-form">
+                    <input
+                      type="text"
+                      id="todo-input"
+                      placeholder="Adicionar nova tarefa"
+                    />
+                    <button id="todo-button" type="submit">
+                      <i class="fi fi-rr-add"></i>
+                    </button>
+                  </form>
+                  <ul id="todo-list"></ul>
                 </div>
               </div>
-              <div class="total-list">
-                <h1 class="todo-title">Lista de Tarefas</h1>
-                <form id="todo-form">
-                  <input type="text" id="todo-input" placeholder="Adicionar nova tarefa">
-                  <button type="submit">Adicionar</button>
-                </form>
-                <ul id="todo-list"></ul>
-              </div>
             </div>
+          </section>
+          <section
+            id="relatoriosPage"
+            class="page-content"
+            style="display: none"
+          >
+            <div class="relatorio-text">
+              <h2>OOPS!</h2>
+              <h1>Página em construção</h1>
+              <p>volte novamente mais tarde para verificar seus relatórios.</p>
+            </div>
+            <div id="svgAnimation">
+            </div>
+          </section>
+          <section id="graficosPage" class="page-content" style="display: none">
+            Conteúdo da página: Gráficos
+          </section>
+          <section id="timePage" class="page-content" style="display: none">
+            Conteúdo da página: Time
+          </section>
+        </main>
+      </div>
 
-          </div>
-        </section>
-        <section id="relatoriosPage" class="page-content" style="display: none">
-          Conteúdo da página: Relatórios
-        </section>
-        <section id="graficosPage" class="page-content" style="display: none">
-          Conteúdo da página: Gráficos
-        </section>
-        <section id="timePage" class="page-content" style="display: none">
-          Conteúdo da página: Time
-        </section>
-      </main>
-    </div>
-
-    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.2/dist/chart.umd.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.min.js"></script>
-    <script src="/js/libs/chart.js"></script>
-    <script src="/js/libs/tooltip.js"></script>
-    <script src="/js/libs/line-chart.js"></script>
-    <script src="/js/utils/calendar.js"></script>
-    <script src="/js/utils/todoList.js"></script>
-    <script src="/js/script.js"></script>
-  </section>
-</body>
-
+      <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+      <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.2/dist/chart.umd.min.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.min.js"></script>
+      <script src="/js/libs/chart.js"></script>
+      <script src="/js/libs/tooltip.js"></script>
+      <script src="/js/libs/line-chart.js"></script>
+      <script src="/js/utils/calendar.js"></script>
+      <script src="/js/utils/todoList.js"></script>
+      <script src="/js/utils/animacao-svg.js"></script>
+      <script src="/js/script.js"></script>
+    </section>
+  </body>
 </html>
