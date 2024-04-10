@@ -10,15 +10,14 @@ body {
     height: 100vh;
     background-position: center;
     background-size: cover;
-}
-
-.header {
-    width: 100%;
-    padding: 20px;
     background-image: url(../../images/fundosite.jpg);
-}
+    }
 
-.header .navbar {
+header {
+    width: 100%;
+    padding: 20px;}
+
+header .navbar {
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -81,6 +80,7 @@ body {
 }
 
 .Image-blog{
+    border-radius: 10px;
     width: 350px;
     height: 350px;
 }
@@ -116,6 +116,7 @@ display: flex;
 }
 
 .img-card{
+    border-radius: 10px;
     width: 300px;
     height: 300px;
 }
@@ -163,4 +164,22 @@ display: flex;
     #menu-icon {
         display: block;
     }
+}
+
+footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 70px;
+    width: 100%;
+    margin-top: 50px;
+}
+
+.footer_p {
+    margin: 0;
+    font-size: 18px;
+}
+
+.footer_p:hover {
+    color: #ec9f18;
 }

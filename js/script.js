@@ -13,3 +13,9 @@ closeIcon.addEventListener("click", () => {
 menuIcon.addEventListener("click", () => {
     header.classList.toggle("show-mobile-menu");
 });
+
+let register=document.getElementById("register"
+)
+register.addEventListener("click",function(){
+    window.location.href="../../pages/Login/login.html"
+})
