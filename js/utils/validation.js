@@ -202,7 +202,6 @@ formCadastro.addEventListener("submit", (event) => {
     generoSelecionado &&
     dateInput.value !== "" &&
     num.value !== "" &&
-    complement.value !== "" &&
     email.value !== "" &&
     cpf.value !== ""
   ) {
