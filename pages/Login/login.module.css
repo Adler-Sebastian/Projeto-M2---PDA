@@ -5,13 +5,15 @@
   padding: 0;
   box-sizing: border-box;
 }
-/** Estilização do fundo da página **/
-body {
-  height: 100vh;
-  background-position: center;
-  background-size: cover;
-  background: url("../../images/fundosite.jpg");
+body, html {
+  min-height: 100vh;
+  position: relative;
 }
+
+.auth-container, .containerLogin {
+  min-height: calc(100vh - 120px);
+}
+
 
 #mainLogin {
   position: absolute;
@@ -114,7 +116,8 @@ button {
 }
 
 header {
- 
+  background: url("/images/fundosite.jpg");
+
   width: 100%;
   padding: 20px;
 }
@@ -154,7 +157,20 @@ header .navbar {
   color: #EC9F18;
 }
 
-/* Estilos básicos */
+
+footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 70px; 
+  width: 100%;
+  background: url("/images/fundosite.jpg");
+
+}
+
+.footer_p {
+  margin: 0;
+}
 
 @media screen and (max-width: 900px) {
   #formCadastro {
