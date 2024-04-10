@@ -5,15 +5,16 @@
   padding: 0;
   box-sizing: border-box;
 }
-body, html {
+body,
+html {
   min-height: 100vh;
   position: relative;
 }
 
-.auth-container, .containerLogin {
+.auth-container,
+.containerLogin {
   min-height: calc(100vh - 120px);
 }
-
 
 #mainLogin {
   position: absolute;
@@ -22,9 +23,8 @@ body, html {
   transform: translate(-50%, -50%);
   padding: 4rem;
   border-radius: 10px;
-  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1)
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
 }
-
 
 .registration-form {
   background-color: white;
@@ -33,7 +33,7 @@ body, html {
   align-items: center;
   padding: 50px;
 }
-#formCadastro{
+#formCadastro {
   width: 35%;
   max-width: 600px;
   padding: 3rem;
@@ -45,7 +45,6 @@ body, html {
   margin-bottom: 5px;
   font-weight: bold;
   margin-top: 30px;
-
 }
 .input_form {
   width: 100%;
@@ -63,14 +62,14 @@ body, html {
 
 .genderOption {
   display: flex;
-  align-items: center; 
-  margin-bottom: 5px; 
+  align-items: center;
+  margin-bottom: 5px;
 }
 
-.gender, .option {
-  margin-right: 10px; 
+.gender,
+.option {
+  margin-right: 10px;
 }
-
 
 .divGender > .genderOption:last-child {
   margin-bottom: 0;
@@ -98,7 +97,9 @@ button {
   display: none;
 }
 
-#cpfMessage, #cepMessage,  #message{
+#cpfMessage,
+#cepMessage,
+#message {
   margin-top: 10px;
 }
 .fa-eye {
@@ -108,18 +109,17 @@ button {
   right: 10px;
   transform: translateY(-50%);
   cursor: pointer;
-  z-index: 2; 
+  z-index: 2;
 }
 
-.password-container{
+.password-container {
   position: relative;
 }
-
+/** Estilização do cabeçalho **/
 header {
-  background: url("/images/fundosite.jpg");
-
   width: 100%;
   padding: 20px;
+  background-image: url(../../images/fundosite.jpg);
 }
 
 /** Estilização da barra de navegação **/
@@ -138,7 +138,7 @@ header .navbar {
 }
 
 .navbar .name span {
-  color: #F18F01;
+  color: #f18f01;
 }
 
 .navbar .menulinks {
@@ -154,22 +154,38 @@ header .navbar {
   transition: 0.2s ease;
 }
 .navbar a:hover {
-  color: #EC9F18;
+  color: #ec9f18;
+}
+#close-icon {
+  color: #fff;
+  display: none;
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  cursor: pointer;
 }
 
+#menu-icon {
+  display: none;
+  color: #011936;
+  cursor: pointer;
+}
 
 footer {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 70px; 
+  height: 70px;
   width: 100%;
   background: url("/images/fundosite.jpg");
-
 }
 
 .footer_p {
   margin: 0;
+  font-size: 18px;
+}
+.footer_p:hover{
+color: #ec9f18;
 }
 
 @media screen and (max-width: 900px) {
@@ -178,13 +194,39 @@ footer {
     padding: 2rem;
   }
 
-  .navbar .menulinks {
-    flex-direction: column;
-    gap: 20px;
+  .navbar a {
+    color: #fff;
   }
 
-  header .navbar {
+  .navbar .menulinks {
+    position: fixed;
+    top: 0;
+    left: -260px;
+    width: 260px;
+    height: 100vh;
+    padding: 70px 40px 0;
+    background: #011936;
+    transition: left 0.15s ease;
     flex-direction: column;
+  }
+
+  header.show-mobile-menu::before {
+    content: "";
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    backdrop-filter: blur(4px);
+  }
+
+  header.show-mobile-menu .navbar .menulinks {
+    left: 0;
+  }
+
+  #close-icon,
+  #menu-icon {
+    display: block;
   }
 
   .registration-form {
@@ -209,9 +251,9 @@ footer {
     padding: 8px 16px;
   }
 
-  
-  .account p, .account a {
-    margin: 5px 0; 
+  .account p,
+  .account a {
+    margin: 5px 0;
   }
 
   .password-container i {

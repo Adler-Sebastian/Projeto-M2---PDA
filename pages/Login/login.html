@@ -11,17 +11,22 @@
     />
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.16/jquery.mask.min.js"></script>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+
   </head>
   <body>
-    <header>
+    <header>    
       <nav class="navbar">
-        <a href="#" class="name">Bridge to Diversity<span>.</span></a>
-        <ul class="menulinks">
-          <li><a href="../../index.html">Home</a></li>
-          <li><a href="../Blog/blog.html">Blog</a></li>
-        </ul>
+          <a href="#" class="name">Bridge to Diversity<span>.</span></a>
+          <ul class="menulinks">
+              <span id="close-icon" class="material-symbols-outlined">close</span>
+              <li><a href="../../index.html">Home</a></li>
+              <li><a href="../Blog/blog.html">Blog</a></li>
+          </ul>
+          <span id="menu-icon" class="material-symbols-outlined">menu</span>
       </nav>
-    </header>
+  </header>
+
     <section class="auth-container">
       <main class="registration-form">
         <form id="formCadastro" action="#">
@@ -286,5 +291,6 @@
       <p class="footer_p">© 2023 all rights reserved</p>
     </footer>
     <script src="../../js/utils/validation.js"></script>
+    <script src="../../js/script.js"></script>
   </body>
 </html>
