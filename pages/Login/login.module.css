@@ -96,11 +96,15 @@ button {
 .containerLogin {
   display: none;
 }
-
+#message{
+  margin-top: 10px;
+}
 #cpfMessage,
 #cepMessage,
-#message {
+
+#messageLogin {
   margin-top: 10px;
+  text-align: center;
 }
 .fa-eye {
   position: absolute;

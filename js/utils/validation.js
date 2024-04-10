@@ -112,24 +112,24 @@ function verification() {
 }
 
 let link = document.getElementById("link");
-let cadastro = document.querySelector(".auth-container");
+let registrationHide = document.querySelector(".auth-container");
 let loginForm = document.querySelector(".containerLogin");
-let voltar = document.getElementById("voltarCadastro");
+let backRegistration = document.getElementById("backRegistration");
 
 link.addEventListener("click", function (e) {
   e.preventDefault();
-  cadastro.style.display = "none";
+  registrationHide.style.display = "none";
   loginForm.style.display = "block";
 });
 document
-  .getElementById("voltarCadastro")
+  .getElementById("backRegistration")
   .addEventListener("click", function (e) {
     e.preventDefault();
   });
 
-voltar.addEventListener("click", function (e) {
+backRegistration.addEventListener("click", function (e) {
   e.preventDefault();
-  cadastro.style.display = "block";
+  registrationHide.style.display = "block";
   loginForm.style.display = "none";
 });
 
@@ -214,7 +214,7 @@ formCadastro.addEventListener("submit", (event) => {
     localStorage.setItem("user", JSON.stringify(user));
 
     message.innerHTML = "Cadastrado com sucesso!!";
-    cadastro.style.display = "none";
+    registrationHide.style.display = "none";
     loginForm.style.display = "block";
   } else {
     message.innerHTML = "Campos inválidos";
@@ -246,7 +246,7 @@ toClean.addEventListener("click", (event) => {
   cpf.value = "";
 });
 
-let logar = document.getElementById("logar");
+let logInto = document.getElementById("logInto");
 let toCleanLogin = document.getElementById("toCleanLogin");
 let inputLogin = document.getElementById("inputLogin");
 let messageLogin = document.getElementById("messageLogin");
@@ -259,7 +259,7 @@ toCleanLogin.addEventListener("click", function (event) {
   messageLogin.innerHTML = "";
 });
 
-logar.addEventListener("click", function (event) {
+logInto.addEventListener("click", function (event) {
   event.preventDefault();
   let listaUser = [];
   let valid = {
