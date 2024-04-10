@@ -1,12 +1,296 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Cadastro/Login</title>
-    <link rel="stylesheet" href="login.module.css">
-</head>
-<body>
-    <h1>Pagina de cadastro e login.</h1>
-</body>
+    <link rel="stylesheet" href="login.module.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+    />
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.16/jquery.mask.min.js"></script>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+
+  </head>
+  <body>
+    <header>    
+      <nav class="navbar">
+          <a href="#" class="name">Bridge to Diversity<span>.</span></a>
+          <ul class="menulinks">
+              <span id="close-icon" class="material-symbols-outlined">close</span>
+              <li><a href="../../index.html">Home</a></li>
+              <li><a href="../Blog/blog.html">Blog</a></li>
+          </ul>
+          <span id="menu-icon" class="material-symbols-outlined">menu</span>
+      </nav>
+  </header>
+
+    <section class="auth-container">
+      <main class="registration-form">
+        <form id="formCadastro" action="#">
+          <label class="labelForm" for="name"> Nome Completo:</label>
+          <input
+            class="input_form"
+            type="text"
+            id="name"
+            name="name"
+            autofocus
+            placeholder="Digite o seu nome "
+          />
+
+          <label for="date" class="labelForm"> Data de nascimento: </label>
+          <input class="input_form" type="date" id="date" name="date" />
+
+          <div class="divGender">
+            <label for="gender" class="labelForm">Gênero:</label>
+            <div class="genderOption">
+              <input
+                type="radio"
+                id="cisgenderW"
+                class="gender"
+                name="gender"
+                value="cisgenderWoman"
+              />
+              <label class="option" for="cisgenderW">Mulher cisgênero</label>
+            </div>
+            <div class="genderOption">
+              <input
+                type="radio"
+                id="transgenderWoman"
+                class="gender"
+                name="gender"
+                value="transgenderWoman"
+              />
+              <label class="option" for="transgenderWoman"
+                >Mulher transgênero</label
+              >
+            </div>
+            <div class="genderOption">
+              <input
+                type="radio"
+                id="cisgenderMan"
+                class="gender"
+                name="gender"
+                value="cisgenderMan"
+              />
+              <label class="option" for="cisgenderMan">Homem cisgênero</label>
+            </div>
+            <div class="genderOption">
+              <input
+                type="radio"
+                id="transgenderMan"
+                class="gender"
+                name="gender"
+                value="transgenderMan"
+              />
+              <label class="option" for="transgenderMan"
+                >Homem transgênero</label
+              >
+            </div>
+            <div class="genderOption">
+              <input
+                type="radio"
+                id="nonBinary"
+                class="gender"
+                name="gender"
+                value="non-binary"
+              />
+              <label class="option" for="nonBinary">Não-binário</label>
+            </div>
+            <div class="genderOption">
+              <input
+                type="radio"
+                id="other"
+                class="gender"
+                name="gender"
+                value="other"
+              />
+              <label class="option" for="other">Outros</label>
+            </div>
+          </div>
+
+          <label for="cpf" class="labelForm">CPF:</label>
+          <input
+            class="input_form"
+            type="number"
+            id="cpf"
+            name="cpf"
+            placeholder="Digite seu cpf"
+          />
+          <div id="cpfMessage"></div>
+
+          <label for="cellNumber" class="labelForm"> Telefone Celular:</label>
+          <input
+            class="input_form"
+            type="tel"
+            id="number"
+            name="number"
+            placeholder="(xx) xxxxx-xxxx"
+            maxlength="14"
+          />
+
+          <label class="labelForm" for="address"> Cep:</label>
+          <input
+            class="input_form"
+            type="number"
+            maxlength="8"
+            id="zipCode"
+            name="zipCode"
+            placeholder="Digite seu cep"
+          />
+          <div id="cepMessage"></div>
+
+          <label class="labelForm" for="address"> Cidade:</label>
+          <input
+            class="input_form"
+            type="text"
+            id="city"
+            name="cidadecity"
+            placeholder="Digite sua cidade"
+          />
+
+          <label for="address" class="labelForm"> Bairro:</label>
+          <input
+            class="input_form"
+            type="text"
+            id="neighborhood"
+            name="neighborhood"
+            placeholder="Digite seu bairro"
+          />
+
+          <label for="address" class="labelForm"> Rua:</label>
+          <input
+            class="input_form"
+            type="text"
+            id="road"
+            name="road"
+            placeholder="Digite sua rua"
+          />
+
+          <label id="labelN" for="address" class="labelForm"> Nº:</label>
+          <input
+            class="input_form"
+            type="number"
+            id="num"
+            name="number"
+            placeholder="Digite o número da casa"
+          />
+
+          <label for="address" class="labelForm"> Complemento:</label>
+          <input
+            class="input_form"
+            type="text"
+            id="complement"
+            name="complement"
+            placeholder="Digite o complemento"
+          />
+
+          <label class="labelForm" for="login">Login:</label>
+          <input
+            class="input_form"
+            type="text"
+            id="login"
+            name="login"
+            placeholder="Digite um login"
+            maxlength="6"
+          />
+          
+          <label class="labelForm" id="labelEmail" for="login" class="form">
+            E-mail:</label
+          >
+          <input
+            class="input_form"
+            type="email"
+            id="email"
+            name="email"
+            placeholder="Digite um e-mail"
+          />
+
+
+          <label class="labelForm" for="senha"> Senha:</label>
+          <div class="password-container">
+            <input
+              class="input_form"
+              type="password"
+              id="password"
+              name="password"
+              placeholder="Digite sua senha"
+              maxlength="8"
+              autocomplete="new-password"
+            />
+            <i id="seePassword" class="far fa-eye"></i>
+          </div>
+
+          <label class="labelForm" for="senha2"> Confirmação de Senha:</label>
+          <div class="password-container">
+            <input
+              class="input_form"
+              type="password"
+              id="PasswordC"
+              name="PasswordC"
+              placeholder="Digite sua senha"
+              maxlength="8"
+              autocomplete="new-password"
+            />
+            <i id="seePassword2" class="far fa-eye"></i>
+          </div>
+          <div id="message"></div>
+          <div class="account">
+            <p>Já possui uma conta?</p>
+            <a href="#" class="session" id="link">Iniciar sessão</a>
+          </div>
+
+          <button class="register" type="submit" id="register">
+            Cadastrar
+          </button>
+          <button class="toClean" id="toClean">Limpar</button>
+        </form>
+      </main>
+    </section>
+
+    <section class="containerLogin">
+      <main id="mainLogin">
+        <form action="" id="toEnter">
+          <label class="labelForm" for="login">Login:</label>
+          <input
+            class="input_form"
+            type="text"
+            id="inputLogin"
+            name="login"
+            placeholder="Digite um login"
+            maxlength="6"
+          />
+          <label class="labelForm" for=""> Senha</label>
+          <div class="password-container">
+            <input
+              class="input_form"
+              type="password"
+              id="passwordInput"
+              name="password"
+              placeholder="Digite sua senha"
+              maxlength="8"
+              autocomplete="new-password"
+            />
+            <i id="PasswordLogin" class="far fa-eye"></i>
+          </div>
+          <div id="messageLogin"></div>
+          <div class="account">
+            <p>Não possui uma conta?</p>
+            <a href="#" class="session" id="backRegistration">Cadastra-se</a>
+          </div>
+        </form>
+
+        <button type="submit" id="logInto">Logar</button>
+        <button id="toCleanLogin">Limpar</button>
+      </main>
+    </section>
+
+    <footer>
+      <p class="footer_p">© 2023 all rights reserved</p>
+    </footer>
+    <script src="../../js/utils/validation.js"></script>
+    <script src="../../js/script.js"></script>
+  </body>
 </html>
