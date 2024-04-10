@@ -12,15 +12,13 @@ body {
     background-size: cover;
 }
 
-/** Estilização do cabeçalho **/
-header {
-    background-image: url(../../images/fundosite.jpg);
+.header {
     width: 100%;
     padding: 20px;
+    background-image: url(../../images/fundosite.jpg);
 }
 
-/** Estilização da barra de navegação **/
-header .navbar {
+.header .navbar {
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -35,7 +33,7 @@ header .navbar {
 }
 
 .navbar .name span {
-    color: #F18F01;
+    color: #f18f01;
 }
 
 .navbar .menulinks {
@@ -52,7 +50,22 @@ header .navbar {
 }
 
 .navbar a:hover {
-    color: #EC9F18;
+    color: #ec9f18;
+}
+
+#close-icon {
+    color: #fff;
+    display: none;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    cursor: pointer;
+}
+
+#menu-icon {
+    display: none;
+    color: #011936;
+    cursor: pointer;
 }
 
 .container{
@@ -111,4 +124,43 @@ display: flex;
     width: 250px;
     margin-left: 20px;
     margin-top: 80px;
+}
+
+@media screen and (max-width: 900px) {
+
+
+    .navbar a {
+        color: #fff;
+    }
+
+    .navbar .menulinks {
+        position: fixed;
+        top: 0;
+        left: -260px;
+        width: 260px;
+        height: 100vh;
+        padding: 70px 40px 0;
+        background: #011936;
+        transition: left 0.15s ease;
+        flex-direction: column;
+    }
+
+    header.show-mobile-menu::before {
+        content: "";
+        position: fixed;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        backdrop-filter: blur(4px);
+    }
+
+    header.show-mobile-menu .navbar .menulinks {
+        left: 0;
+    }
+
+    #close-icon,
+    #menu-icon {
+        display: block;
+    }
 }
