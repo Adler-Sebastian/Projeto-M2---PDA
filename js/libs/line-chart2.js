@@ -1,7 +1,7 @@
 const lineChartData = {
-    labels: ['January', 'February', 'March', 'April', 'May', 'June', 'July'],
+    labels: ['Jan', 'Fev', 'Mar', 'Abr', 'Mai', 'Jun', 'Jul'],
     datasets: [{
-      label: 'Line Chart',
+      label: 'Produto 1   ',
       data: [65, 59, 80, 81, 56, 55, 40],
       fill: false,
       borderColor: 'rgba(75, 192, 192, 1)',
