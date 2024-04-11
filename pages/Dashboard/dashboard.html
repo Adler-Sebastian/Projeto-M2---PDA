@@ -65,15 +65,15 @@
               ><span class="text-link">Relatórios</span></label
             >
           </li>
-          <li id="graficos">
+          <li id="graph">
             <input
               type="radio"
-              id="graficosRadio"
+              id="graphRadio"
               name="page"
-              value="graficos"
+              value="graph"
               class="menu-radio"
             />
-            <label for="graficosRadio"
+            <label for="graphRadio"
               ><i class="fi fi-br-chart-simple"></i
               ><span class="text-link">Gráficos</span></label
             >
@@ -264,8 +264,26 @@
             <div id="svgAnimation">
             </div>
           </section>
-          <section id="graficosPage" class="page-content" style="display: none">
-            Conteúdo da página: Gráficos
+          <section id="graphPage" class="page-content" style="display: none">
+            <div class="graph-header">
+              <h1>Meus Gráficos</h1>
+            </div>
+            <div class="graph-top">
+              <div class="graph graph-column">
+                <canvas id="columnChart"></canvas>
+              </div>
+              <div class="graph graph-line">
+                <canvas id="lineChart"></canvas>
+              </div>
+            </div>
+            <div class="graph-botton">
+              <div class="graph graph-pie">
+                <canvas id="pieChart"></canvas>
+              </div>
+              <div class="graph graph-bar">
+                <canvas id="barChart"></canvas>
+              </div>
+            </div>
           </section>
           <section id="timePage" class="page-content" style="display: none">
             Conteúdo da página: Time
@@ -282,6 +300,10 @@
       <script src="/js/utils/calendar.js"></script>
       <script src="/js/utils/todoList.js"></script>
       <script src="/js/utils/animacao-svg.js"></script>
+      <script src="/js/libs/bar-chart.js"></script>
+      <script src="/js/libs/column-chart.js"></script>
+      <script src="/js/libs/line-chart2.js"></script>
+      <script src="/js/libs/pie-chart.js"></script>
       <script src="/js/script.js"></script>
     </section>
   </body>

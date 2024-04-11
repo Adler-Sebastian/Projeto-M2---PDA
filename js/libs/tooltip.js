@@ -14,7 +14,7 @@ const tooltips = [
     },
   },
   {
-    id: "#graficos",
+    id: "#graph",
     config: {
       placement: "right",
       content: "Gráficos",
