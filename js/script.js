@@ -1,3 +1,27 @@
+document.addEventListener('DOMContentLoaded', function () {
+  const menuRadios = document.querySelectorAll('.menu-radio');
+
+  function showPage(pageName) {
+      const pages = document.querySelectorAll('.page-content');
+      pages.forEach(page => {
+          if (page.id === pageName + 'Page') {
+              page.style.display = 'flex'; 
+          } else {
+              page.style.display = 'none'; 
+          }
+      });
+  }
+
+  menuRadios.forEach(radio => {
+      radio.addEventListener('change', function () {
+          const pageName = this.value;
+
+          showPage(pageName); 
+      });
+  });
+});
+
+
 // Determinação de variáveis no script
 
 const header = document.querySelector("header")

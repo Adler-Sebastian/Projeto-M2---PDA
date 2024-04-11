@@ -1,12 +1,34 @@
+
 :root {
     /* Paleta de cores principal da marca */
-    --celeste: #B5F8FE;
-    --cornflower: #6495ed;
-    --oxford-blue: #011936;
-    --carrot-orange: #F18F01;
-    --gamboge: #EC9F18;
-    --xanthour: #E6AF2E;
+    --celeste: #b5f8feff;
+    --cornflower: #6495edff;
+    --oxford-blue: #011936ff;
+    --carrot-orange: #f18f01ff;
+    --gamboge: #ec9f18ff;
+    --xanthous: #e6af2eff;
 
     --primary-white: #fff;
     --primary-black: #000;
+    --primary-blue: #007bff;
+    --primary-indigo: #6610f2ff;
+    --primary-purple: #6f42c1ff;
+    --primary-pink: #e83e8cff;
+    --primary-red: #dc3545ff;
+    --primary-orange: #fd7e14ff;
+    --primary-yellow: #ffc107ff;
+    --primary-green: #28a745ff;
+    --primary-teal: #20c997ff;
+    --primary-cyan: #17a2b8ff;
 }
+
+li {
+    list-style: none;
+}
+
+hr {
+    margin: 0 auto;
+    width: 90%;
+    border-color: #ffffff2a;
+}
+
