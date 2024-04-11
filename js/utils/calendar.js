@@ -6,8 +6,8 @@ document.addEventListener("DOMContentLoaded", function() {
     const daysOfWeekContainer = document.querySelector(".days-week");
   
     let currentDate = new Date();
-    let selectedDates = new Set(); // Conjunto para armazenar as datas selecionadas
-  
+    let selectedDates = new Set(); 
+
     function renderCalendar() {
       currentMonthYear.textContent = currentDate.toLocaleString("default", { month: "long" }) + " " + currentDate.getFullYear();
       daysContainer.innerHTML = "";
@@ -36,17 +36,14 @@ document.addEventListener("DOMContentLoaded", function() {
         day.textContent = i;
         daysContainer.appendChild(day);
   
-        // Marcar o dia atual
         if (currentDate.getFullYear() === new Date().getFullYear() && currentDate.getMonth() === new Date().getMonth() && i === new Date().getDate()) {
           day.classList.add("today");
         }
   
-        // Adicionar classe 'selected' aos dias selecionados
         if (selectedDates.has(i)) {
           day.classList.add("selected");
         }
   
-        // Adicionar evento de clique para selecionar/desselecionar o dia
         day.addEventListener("click", function() {
           if (selectedDates.has(i)) {
             selectedDates.delete(i);

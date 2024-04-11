@@ -36,9 +36,8 @@ document.addEventListener("DOMContentLoaded", function () {
       const checkbox = listItem.querySelector("input[type='checkbox']");
       const label = listItem.querySelector("label");
   
-      // Adiciona o evento de clique à label
       label.addEventListener("click", function () {
-        checkbox.checked = !checkbox.checked; // Alterna o estado do checkbox
+        checkbox.checked = !checkbox.checked; 
         if (checkbox.checked) {
           listItem.classList.add("completed");
         } else {
