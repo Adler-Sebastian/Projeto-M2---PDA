@@ -28,6 +28,8 @@ Pronto para fazer a diferença? Inscreva-se agora e faça parte de uma comunidad
 
 **Junte-se ao DiversityDash. Empodere a Mudança.**
 
+
+
 # Estrutura do Projeto
 
 Este projeto possui a seguinte estrutura de pastas e arquivos:
