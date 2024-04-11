@@ -54,6 +54,7 @@ Este projeto possui a seguinte estrutura de pastas e arquivos:
 * *backgroud_dashboard.jpg* : Imagem de fundo para o dashboard.
 * *dashboard.gif* : Animação em formato GIF.
 * *fundoazul.jpg* : Imagem de fundo azul.
+* *fundosite.jpg" : Imagem do fundo da Home.
 * *img-empresa.avif* ,  *img-palestra.avif* ,  *img-premiação.avif* : Imagens em formato AVIF.
 * *linkedin.svg* : Ícone da rede social LinkedIn.
 * *membro1.png* ,  *membro2.png* ,  *membro3.jpeg* ,  *membro4.png* : Imagens de membros.
