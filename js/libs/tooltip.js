@@ -21,7 +21,7 @@ const tooltips = [
     },
   },
   {
-    id: "#time",
+    id: "#team",
     config: {
       placement: "right",
       content: "Time",
