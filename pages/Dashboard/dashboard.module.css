@@ -549,11 +549,18 @@ canvas {
   background-color: var(--oxford-blue);
 }
 
-h1 {
+#teamPage h1,
+#graphPage h1{
   font-weight: 600;
   color: var(--primary-white);
   gap: 5px;
   font-size: 30px;
+}
+
+#teamPage p {
+  font-weight: 400;
+  color: rgb(231, 231, 231);
+  font-size: 15px;
 }
 
 #teamPage .group-cards {
