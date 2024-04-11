@@ -7,7 +7,7 @@ const tooltips = [
     },
   },
   {
-    id: "#relatorios",
+    id: "#reports",
     config: {
       placement: "right",
       content: "Relatórios",
