@@ -19,6 +19,7 @@ html {
 #mainLogin {
   position: absolute;
   top: 50%;
+  
   left: 50%;
   transform: translate(-50%, -50%);
   padding: 4rem;
@@ -91,7 +92,7 @@ button {
   border: none;
   border-radius: 5px;
   cursor: pointer;
-  margin-top: 10px;
+  margin-top: 20px;
 }
 .containerLogin {
   display: none;
@@ -226,6 +227,7 @@ color: #ec9f18;
 
   header.show-mobile-menu .navbar .menulinks {
     left: 0;
+    z-index: 2;
   }
 
   #close-icon,
@@ -240,12 +242,18 @@ color: #ec9f18;
   .password-container i {
     right: 5px;
   }
+ #mainLogin{
+  padding: 3rem;
+ }
 }
 
 @media screen and (max-width: 480px) {
   .navbar .name {
     font-size: 1.8rem;
   }
+  #mainLogin {
+    padding: 1rem;
+}
 
   .navbar .menulinks {
     font-size: 16px;
@@ -263,4 +271,7 @@ color: #ec9f18;
   .password-container i {
     font-size: 18px;
   }
+}
+#toEnter{
+  width: 350px;
 }
