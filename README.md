@@ -57,8 +57,8 @@ Este projeto possui a seguinte estrutura de pastas e arquivos:
 * *membro1.png* ,  *membro2.png* ,  *membro3.jpeg* ,  *membro4.png* : Imagens de membros.
 * *undraw_data_trends_re_2cdy.svg* : Ilustração SVG.
 * **js** : Pasta que contém os arquivos JavaScript da aplicação.
-* **script.js** : Script principal JavaScript.
-* **libs** : Pasta que contém bibliotecas JavaScript externas.
+** **script.js** : Script principal JavaScript.
+** **libs** : Pasta que contém bibliotecas JavaScript externas.
 * **plugins** : Pasta que contém plugins JavaScript adicionais.
 * **utils** : Pasta que contém utilitários JavaScript.
 * **pages** : Pasta que contém as páginas da aplicação organizadas por funcionalidade.
