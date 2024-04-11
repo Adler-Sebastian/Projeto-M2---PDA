@@ -3,6 +3,7 @@
   padding: 0;
   box-sizing: border-box;
   font-family: Arial, sans-serif;
+  border: red 1px solid;
 }
 
 :root {
@@ -200,6 +201,7 @@ i {
   padding: 15px;
   position: sticky;
   top: 20px;
+  z-index: 1;
   border-radius: 20px;
   background: rgba(255, 255, 255, 0);
   box-shadow: rgba(0, 0, 0, 0.07) 0px 1px 1px, rgba(0, 0, 0, 0.07) 0px 2px 2px,
@@ -453,7 +455,7 @@ canvas {
   width: 100%;
 }
 
-#relatoriosPage {
+#reportsPage {
   display: flex;
   align-items: center;
   justify-content: space-around;
@@ -469,7 +471,7 @@ canvas {
   }
 }
 
-.relatorio-text {
+.reports-text {
   display: flex;
   flex-direction: column;
   gap: 10px;
@@ -478,18 +480,18 @@ canvas {
   border-radius: 20px;
 }
 
-#relatoriosPage h2 {
+#reportsPage h2 {
   color: #fff;
 }
 
-#relatoriosPage h1 {
+#reportsPage h1 {
   font-weight: 600;
   color: var(--primary-white);
   gap: 5px;
   font-size: 30px;
 }
 
-#relatoriosPage p {
+#reportsPage p {
   font-weight: 400;
   color: rgb(231, 231, 231);
   font-size: 15px;
@@ -537,6 +539,28 @@ canvas {
     display: block;
 }
 
-#timePage {
-  background-color: aqua;
+
+
+#teamPage {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  gap: 10px;
+  background-color: var(--oxford-blue);
+}
+
+h1 {
+  font-weight: 600;
+  color: var(--primary-white);
+  gap: 5px;
+  font-size: 30px;
+}
+
+#teamPage .group-cards {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  gap: 20px;
+  width: 100%;
 }

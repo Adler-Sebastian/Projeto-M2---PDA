@@ -59,7 +59,7 @@ function updateLastLabel(data) {
   label.textContent = `Total: R$${total}`;
   revenue_profit.appendChild(label);
 
-  return total; // Retorna o total calculado
+  return total; 
 }
 
 function calcPercentage(total) {
@@ -67,7 +67,7 @@ function calcPercentage(total) {
   const percentageChange = ((total - initial_total) / initial_total) * 100;
   const status = percentageChange >= 0 ? 'aumento' : 'queda';
   const absPercentage = Math.abs(percentageChange); 
-  const formattedPercentage = absPercentage.toFixed(2); // Limitando a duas casas decimais
+  const formattedPercentage = absPercentage.toFixed(2);
 
   revenue_porcent.innerHTML = '';
 
@@ -88,7 +88,7 @@ const chart = new Chart(ctx, {
       datasets: [{
           label: 'Produto 1',
           fill: true,
-          data: [1000, 1500, 1200, 1800, 2000, 2500, 2200, 1234, 2032, 2344, 3000, 2795], // Dados para o eixo y
+          data: [1000, 1500, 1200, 1800, 2000, 2500, 2200, 1234, 2032, 2344, 3000, 2795],
           backgroundColor: colors.blue.half, 
           borderColor: colors.blue.quarter, 
           borderWidth: 1,
@@ -99,7 +99,7 @@ const chart = new Chart(ctx, {
       {
           label: 'Produto 2',
           fill: true,
-          data: [1045, 1234, 1580, 1800, 2750, 2860, 2450, 2144, 1532, 1944, 2300, 2130], // Dados para o eixo y
+          data: [1045, 1234, 1580, 1800, 2750, 2860, 2450, 2144, 1532, 1944, 2300, 2130],
           backgroundColor: colors.purple.quarter, 
           borderColor: colors.purple.half, 
           borderWidth: 1,
