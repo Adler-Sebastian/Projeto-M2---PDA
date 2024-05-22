@@ -280,7 +280,7 @@ logInto.addEventListener("click", function (event) {
     }
   });
   if(inputLogin.value == valid.user && passwordInput.value == valid.senha && valid.user != "" && valid.senha != ""){
-    window.location.href = '../Dashboard/Dashboard.html';
+    window.location.href = '../Dashboard/dashboard.html';
 } else {
     messageLogin.innerHTML='Usuário não encontrado';
 }
